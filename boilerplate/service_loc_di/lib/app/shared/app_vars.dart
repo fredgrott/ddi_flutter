@@ -3,3 +3,5 @@
 // license that can be found in the LICENSE file.
 
 String myAppTitle = "Service Loc Di";
+
+String appLoggerName = "MyAppLogger";

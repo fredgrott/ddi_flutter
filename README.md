@@ -31,6 +31,8 @@ As I get closer to publication dates, you will find the book website and upcomin
 
 ## Community Resources
 
+Git Help Resources <https://sethrobertson.github.io/GitBestPractices/>
+
 Flutter Community Resources <https://flutter.dev/community>
 
 Flutter SDK <https://flutter.dev/docs/get-started/install>

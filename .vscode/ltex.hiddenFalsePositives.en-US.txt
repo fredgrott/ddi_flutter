@@ -24,3 +24,5 @@
 {"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qfboilerplate\\E$"}
 {"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qfboilerplate\\E$"}
 {"rule":"PREPOSITION_VERB","sentence":"^\\QThe Flutter Counter App from the create project template modified\\E$"}
+{"rule":"WORD_CONTAINS_UNDERSCORE","sentence":"^\\QReboot and install Android Studio, and it will automatically install one android SDK with the ANDROID_SDK_ROOT you have already set.\\E$"}
+{"rule":"BY_BUY","sentence":"^\\QThe installation of LCOV allows us to by cmd-line generate the code coverage reports as far as unit testing.\\E$"}

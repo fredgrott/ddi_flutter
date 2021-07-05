@@ -128,7 +128,7 @@ class Injector {
     _factories[objectKey] = TypeFactory<T>((i, p) => factoryFn(i), isSingleton)
         as TypeFactory<Object>;
 
-    log("Injected $T $factoryFn");
+    log("Injected $T.toString() $factoryFn.toString()");
 
     return this;
   }
@@ -166,7 +166,7 @@ class Injector {
     _factories[objectKey] =
         TypeFactory<T>(factoryFn, false) as TypeFactory<Object>;
 
-    log("Injected $T $factoryFn");
+    log("Injected $T.toString() $factoryFn.toString()");
     
     return this;
   }
@@ -229,7 +229,7 @@ class Injector {
     if (objectFactory == null) {
       throw InjectorException("Cannot find object factory for '$objectKey'");
     }
-    log("Injector grabbed $T");
+    log("Injector grabbed $T.toString()");
 
     return objectFactory.get(this, additionalParameters) as T;
   }

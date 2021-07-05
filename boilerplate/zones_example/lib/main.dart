@@ -2,6 +2,8 @@ import 'dart:async';
 
 import 'package:flutter/widgets.dart';
 import 'package:zones_example/app/myapp.dart';
+import 'package:zones_example/app/shared/app_exceptions.dart';
+import 'package:zones_example/app/shared/app_init_log.dart';
 import 'package:zones_example/app/shared/build_modes.dart';
 import 'package:zones_example/app/shared/constants.dart';
 
@@ -13,7 +15,6 @@ void mainDelegate() => appMain();
 
 // ignore: prefer_void_to_null
 Future<Null> appMain() async {
-
   // an internal FlutterError reporter that dumps to console
   FlutterError.onError = (FlutterErrorDetails details) async {
     if (isInDebugMode) {
@@ -28,7 +29,11 @@ Future<Null> appMain() async {
         // so I just assume we do not have a stack trace but still want the
         // detail of the exception.
         // ignore: cast_nullable_to_non_nullable
-        Zone.current.handleUncaughtError(details.exception, details.stack as StackTrace);
+        Zone.current.handleUncaughtError(
+            // ignore: cast_nullable_to_non_nullable
+            details.exception,
+            // ignore: cast_nullable_to_non_nullable
+            details.stack as StackTrace);
         //Zone.current.handleUncaughtError(details.exception,  details.stack);
       }
     }
@@ -42,6 +47,9 @@ Future<Null> appMain() async {
       // and it needs to be called here to enable grabbing the errors
       WidgetsFlutterBinding.ensureInitialized();
       // Service and other initializations here
+
+      tryFunction(appInitLog, myAppLogger);
+
       runApp(const MyApp());
     },
     // ignore: no-empty-block
@@ -60,6 +68,5 @@ Future<Null> appMain() async {
         parent.print(zone, messageToLog);
       },
     ),
-
   );
 }
