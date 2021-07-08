@@ -6,7 +6,7 @@ import 'dart:developer';
 
 import 'package:logging/logging.dart';
 import 'package:logging_appenders/logging_appenders.dart';
-import 'package:zones_example/app/shared/appender_types.dart';
+import 'package:zones_example/app/shared/logging_appender_types.dart';
 
 class MyDevLogAppender extends BaseLogAppender {
   MyDevLogAppender({LogRecordFormatter? formatter})

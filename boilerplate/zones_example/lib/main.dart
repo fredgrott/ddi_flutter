@@ -2,10 +2,11 @@ import 'dart:async';
 
 import 'package:flutter/widgets.dart';
 import 'package:zones_example/app/myapp.dart';
-import 'package:zones_example/app/shared/app_exceptions.dart';
-import 'package:zones_example/app/shared/app_init_log.dart';
+
 import 'package:zones_example/app/shared/build_modes.dart';
 import 'package:zones_example/app/shared/constants.dart';
+import 'package:zones_example/app/shared/logging_appexceptions.dart';
+import 'package:zones_example/app/shared/logging_appinitlog.dart';
 
 // This works as the main function in say main_dev.dart
 // redirects to this mainDelegate() function and
@@ -33,7 +34,7 @@ Future<Null> appMain() async {
             // ignore: cast_nullable_to_non_nullable
             details.exception,
             // ignore: cast_nullable_to_non_nullable
-            details.stack as StackTrace);
+            details.stack as StackTrace,);
         //Zone.current.handleUncaughtError(details.exception,  details.stack);
       }
     }
@@ -48,7 +49,7 @@ Future<Null> appMain() async {
       WidgetsFlutterBinding.ensureInitialized();
       // Service and other initializations here
 
-      tryFunction(appInitLog, myAppLogger);
+      tryFunction(appInitLog);
 
       runApp(const MyApp());
     },
