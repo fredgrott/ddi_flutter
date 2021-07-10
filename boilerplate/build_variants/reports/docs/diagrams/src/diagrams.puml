@@ -1,0 +1,50 @@
+@startuml
+set namespaceSeparator ::
+
+class "build_variants::app::myapp.dart::MyApp" {
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "build_variants::app::myapp.dart::MyApp"
+
+class "build_variants::app::screens::home::myhomepage.dart::MyHomePage" {
+  +dynamic title
+  +State createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "build_variants::app::screens::home::myhomepage.dart::MyHomePage"
+
+class "build_variants::app::screens::home::myhomepage.dart::_MyHomePageState" {
+  -int _counter
+  -void _incrementCounter()
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::State<T>" <|-- "build_variants::app::screens::home::myhomepage.dart::_MyHomePageState"
+
+class "build_variants::app::shared::constants.dart::Environment" {
+  +int index
+  {static} +List<Environment> values
+  {static} +Environment dev
+  {static} +Environment stagging
+  {static} +Environment prod
+}
+
+"build_variants::app::shared::constants.dart::Environment" o-- "build_variants::app::shared::constants.dart::Environment"
+
+class "build_variants::app::shared::constants.dart::Constants" {
+  -dynamic _config
+  +dynamic whereAmI
+  +dynamic Map()
+  +void setEnvironment()
+}
+
+class "build_variants::app::shared::constants.dart::_Config" {
+  {static} +Map<String, dynamic> debugConstants
+  {static} +Map<String, dynamic> prodConstants
+  {static} +Map<String, dynamic> qaConstants
+  {static} +String whereAmI
+}
+
+
+@enduml

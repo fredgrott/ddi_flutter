@@ -219,3 +219,5 @@ docs:
     - echo api docs generated
 
 
+flutterdeps:
+  - flutter pub global run pubviz --format=dot print > reports/flutterdeps/output.dot

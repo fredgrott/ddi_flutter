@@ -218,4 +218,18 @@ docs:
     - cp media/screenshot.png reports/docs/api/images
     - echo api docs generated
 
+flutterdeps:
+  - flutter pub global run pubviz --format=dot print > reports/flutterdeps/output.dot
+
+
+# keep in mind have to launch separate terminal and type
+# chromedriver --port=4444 or in separate folder of chromedriver and launch the exe of chromedriver
+integration:
+  win64:
+    - flutter drive --driver=test_driver\integration_test.dart --target=integration_test\widget_screen_test.dart -d web-server > machine.log --screenshot=screenshots
+  mac64: 
+    - flutter drive --driver=test_driver/integration_test.dart --target=integration_test/widget_screen_test.dart -d web-server > machine.log --screenshot=screenshots
+  linux64:
+    - flutter drive --driver=test_driver/integration_test.dart --target=integration_test/widget_screen_test.dart -d web-server > machine.log --screenshot=screenshots
+
 

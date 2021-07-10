@@ -2,7 +2,7 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
-enum Environment { dev, stagging, prod }
+enum Environment { dev, staging, prod }
 
 class Constants {
   late Map<String, dynamic> _config;
@@ -12,7 +12,7 @@ class Constants {
       case Environment.dev:
         _config = _Config.debugConstants;
         break;
-      case Environment.stagging:
+      case Environment.staging:
         _config = _Config.qaConstants;
         break;
       case Environment.prod:

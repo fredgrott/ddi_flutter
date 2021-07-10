@@ -54,7 +54,7 @@ dev_dependencies:
   golden_toolkit: ^0.9.0
   given_when_then: ^0.2.0
   page_object: ^0.2.0
-  mocktail: ^0.1.2
+  mocktail: ^0.1.4
 
 
 

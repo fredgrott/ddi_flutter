@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite errors="0" failures="0" tests="1" skipped="0" name="D:.fredgrttsstuff.GithubProjects.ddi_flutter.boilerplate.build_variants.test.widget" timestamp="2021-07-10T15:29:25">
+    <properties>
+      <property name="platform" value="vm"/>
+    </properties>
+    <testcase classname="D:.fredgrttsstuff.GithubProjects.ddi_flutter.boilerplate.build_variants.test.widget" name="Counter increments smoke test" time="1.716"/>
+  </testsuite>
+</testsuites>

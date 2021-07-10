@@ -31,7 +31,7 @@
       "name": "Flutter-Profile",
       "type": "dart",
       "request": "launch",
-      "program": "lib/main_stagging.dart",
+      "program": "lib/main_staging.dart",
       "flutterMode": "profile"
     },
 
@@ -50,7 +50,7 @@
       "name":"Flutter-Stagging",
       "request": "launch",
       "type": "dart",
-      "program": "lib/main_stagging.dart",
+      "program": "lib/main_staging.dart",
       "flutterMode": "debug"
     },
     

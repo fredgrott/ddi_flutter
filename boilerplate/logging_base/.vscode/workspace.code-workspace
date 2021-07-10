@@ -29,8 +29,8 @@
 		"editor.formatOnType": true,
 		//dartcode
 		"dart.flutterScreenshotPath":"screenshots",
-           "dart.previewFlutterUiGuides":true,
-"dart.flutterCreateOrganization":"io.github.fredgrott",
+		"dart.previewFlutterUiGuides":true,
+		"dart.flutterCreateOrganization":"io.github.fredgrott",
 		"plantuml.diagramsRoot": "reports/docs/diagrams/src",
     "plantuml.exportOutDir": "reports/docs/diagrams/out",
 		"plantuml.includepaths": ["reports/docs/diagrams/style","docs/diagrams/src"],
