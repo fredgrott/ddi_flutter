@@ -2,9 +2,10 @@ import 'dart:async';
 
 import 'package:catcher/catcher.dart';
 import 'package:catcher_example/app/myapp.dart';
+import 'package:catcher_example/app/shared/app_vars.dart';
 import 'package:catcher_example/app/shared/build_modes.dart';
 import 'package:catcher_example/app/shared/catcher.dart';
-import 'package:catcher_example/app/shared/constants.dart';
+
 import 'package:flutter/widgets.dart';
 
 // This works as the main function in say main_dev.dart

@@ -1,18 +1,20 @@
 import 'dart:async';
+import 'dart:developer';
 
 import 'package:flutter/widgets.dart';
 import 'package:zones_example/app/myapp.dart';
 
 import 'package:zones_example/app/shared/build_modes.dart';
 import 'package:zones_example/app/shared/constants.dart';
-import 'package:zones_example/app/shared/logging_appexceptions.dart';
-import 'package:zones_example/app/shared/logging_appinitlog.dart';
+import 'package:zones_example/app/shared/logging_strategies.dart';
 
 // This works as the main function in say main_dev.dart
 // redirects to this mainDelegate() function and
 // thus dart is able to pick this up via the cmd-line
 // compile(run) -t main_dev.dart
 void mainDelegate() => appMain();
+
+final myLogger = CoreAppLogger().appLogger;
 
 // ignore: prefer_void_to_null
 Future<Null> appMain() async {
@@ -31,11 +33,11 @@ Future<Null> appMain() async {
         // detail of the exception.
         // ignore: cast_nullable_to_non_nullable
         Zone.current.handleUncaughtError(
-            // ignore: cast_nullable_to_non_nullable
-            details.exception,
-            // ignore: cast_nullable_to_non_nullable
-            details.stack as StackTrace,);
-        //Zone.current.handleUncaughtError(details.exception,  details.stack);
+          // ignore: cast_nullable_to_non_nullable
+          details.exception,
+          // ignore: cast_nullable_to_non_nullable
+          details.stack as StackTrace,
+        );
       }
     }
   };
@@ -49,13 +51,13 @@ Future<Null> appMain() async {
       WidgetsFlutterBinding.ensureInitialized();
       // Service and other initializations here
 
-      tryFunction(appInitLog);
+      myLogger.info('app initialized');
 
       runApp(const MyApp());
     },
     // ignore: no-empty-block
     (Object error, StackTrace stack) {
-      // myBackend.sendError(error, stack);
+      log('$error.runtimeType $stack');
     },
     zoneSpecification: ZoneSpecification(
       // Intercept all print calls

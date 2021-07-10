@@ -2,9 +2,10 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
-import 'package:catcher/catcher.dart';
+
 import 'package:catcher_example/app/screens/home/myhomepage.dart';
-import 'package:catcher_example/app/shared/constants.dart';
+import 'package:catcher_example/app/shared/app_vars.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
