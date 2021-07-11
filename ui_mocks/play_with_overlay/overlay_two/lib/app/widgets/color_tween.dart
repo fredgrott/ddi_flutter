@@ -6,9 +6,15 @@
 // MIT license and modifications under BSD license.
 
 
-import 'package:flutter/material.dart';
-import 'package:overlay_one/app/myapp.dart';
 
-void main() {
-  runApp(const MyApp());
+
+import 'package:flutter/animation.dart';
+import 'package:flutter/material.dart';
+
+class ColorTween extends Tween<Color> {
+  ColorTween({required Color begin, required Color end})
+      : super(begin: begin, end: end);
+
+  @override
+  Color lerp(double t) => Color.lerp(begin, end, t)!;
 }
