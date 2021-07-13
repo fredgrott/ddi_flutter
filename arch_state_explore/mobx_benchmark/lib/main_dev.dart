@@ -7,6 +7,7 @@
 // Note you can access static via ClassName().staticMember
 
 
+
 import 'package:mobx_benchmark/app/shared/constants.dart';
 import 'package:mobx_benchmark/main.dart';
 

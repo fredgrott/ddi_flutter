@@ -3,15 +3,20 @@
 // license that can be found in the LICENSE file.
 
 class Item {
-  final String title;
+  Item(this.id, this.value);
 
-  Item({
-    required this.title,
-  });
+  int id;
+  int value;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is Item && runtimeType == other.runtimeType && id == other.id;
+
+  @override
+  int get hashCode => id.hashCode;
 }
 
-final List<Item> sampleItems = [
-  Item(title: 'Item 1'),
-  Item(title: 'Item 2'),
-  Item(title: 'Item 3'),
-];
+
+
+final List<Item> list = List.generate(1000, (index) => Item(index+1, index+1));

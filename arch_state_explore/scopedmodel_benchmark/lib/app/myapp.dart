@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
        theme: ThemeData(
          primarySwatch: Colors.blue,
        ),
-       home: MyPage(title: 'Idle Sample', key: const Key('idle'),),
+       home: const MyPage(title: 'Idle Sample', key: Key('idle'),),
      );
    }
 }

@@ -7,7 +7,6 @@ import 'package:flutter/widgets.dart';
 import 'package:provider_benchmark/app/page.dart';
 
 
-
 class MyApp extends StatelessWidget {
    @override
    Widget build(BuildContext context) {

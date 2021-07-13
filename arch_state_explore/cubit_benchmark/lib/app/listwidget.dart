@@ -8,8 +8,6 @@ import 'package:flutter/widgets.dart';
 
 
 
-
-
 class ListViewWidget extends StatelessWidget {
    @override
    Widget build(BuildContext context) {
@@ -19,7 +17,7 @@ class ListViewWidget extends StatelessWidget {
          itemBuilder: (context, index) {
            
            return ListTile(
-             title: Text(items[index].title),
+             title: Text((items[index].id).toString()),
            );
          },);
    }

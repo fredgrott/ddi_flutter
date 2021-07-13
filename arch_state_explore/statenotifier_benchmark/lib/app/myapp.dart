@@ -6,6 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:statenotifier_benchmark/app/page.dart';
 
+
+
 class MyApp extends StatelessWidget {
    @override
    Widget build(BuildContext context) {
@@ -15,7 +17,7 @@ class MyApp extends StatelessWidget {
        theme: ThemeData(
          primarySwatch: Colors.blue,
        ),
-       home: MyPage(title: 'Idle Sample', key: Key('idle'),),
+       home: const MyPage(title: 'Idle Sample', key: Key('idle'),),
      );
    }
 }

@@ -7,6 +7,8 @@
 // Note you can access static via ClassName().staticMember
 
 
+
+
 import 'package:inheritedmodel_benchmark/app/shared/constants.dart';
 import 'package:inheritedmodel_benchmark/main.dart';
 

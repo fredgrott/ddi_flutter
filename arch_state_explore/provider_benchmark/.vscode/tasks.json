@@ -7,6 +7,8 @@
   //
   //       Also, note that some of this stuff is platformOS specifc. Take it and modify according 
   //       to your platformOS shell specifics.
+  //
+  //  My Added Notes: Can have program or command but not both
 	"version": "2.0.0",
 	"tasks": [
      
@@ -15,29 +17,32 @@
     
 
     { // build an android apk
+      // --dart-define=DART_DEINE_APP_ANME=AppName
       "type": "flutter",
       "command": "flutter",
       "args": [
         "build",
-        "apk"
+        "apk",
+        "-t lib/main_prod.dart"
       ],
       "group": "build",
       "problemMatcher": [],
-      "label": "flutter: flutter build apk"
+      "label": "Flutter: flutter build apk for prod"
     },
     { // build and ios app
       "type": "flutter",
       "command": "flutter",
       "args": [
         "build",
-        "ios"
+        "ios",
+        "-t lib/main_prod.dart"
       ],
       "group": {
         "kind": "build",
         "isDefault": true
       },
       "problemMatcher": [],
-      "label": "flutter: flutter build ios"
+      "label": "Flutter: flutter build ios for prod"
     },
     { // install a flutter app
       "type": "flutter",
@@ -68,6 +73,161 @@
       "problemMatcher": [],
       "label": "flutter: flutter pub upgrade"
     },
+    {// flutter pub global run pubviz --format=dot print > reports/flutterdeps/output.dot
+      "type": "flutter",
+      "command": "flutter",
+      "args": [
+        "pub",
+        "global",
+        "run",
+        "pubviz",
+        "--format=dot",
+        "print > reports/flutterdeps/output.dot"
+      ],
+      "problemMatcher":[],
+      "label": "Flutter: flutter deps report"
+    },
+    {// dartdoc
+      "type":"flutter",
+      "command": "flutter",
+      "args": [
+        "dartdoc"
+      ],
+      "problemMatcher":[],
+      "label": "Flutter: dartdoc"
+    },
+    {// metrics lib --reporter=html --output-directory=reports\metrics
+      "type": "flutter",
+      "command": "flutter",
+      "args": [
+        "metrics lib",
+        "--reporter=html",
+        "--output-directory=reports/metrics"
+      ],
+      "problemMatcher":[],
+      "label": "Flutter: code metrics"
+    },
+    {// dcdg -o reports\docs\diagrams\src\diagrams.puml
+      "type": "flutter",
+      "command": "flutter",
+      "args": [
+        "dcdg",
+        "-o",
+        "reports/docs/diagrams/src/diagrams.puml"
+      ],
+      "problemMatcher": [],
+      "label": "Flutter: UML puml generation"
+    },
+    {
+      "label": "Flutter: Goldens",
+      "dependsOn":["Flutter: Test Goldens", "Flutter: Generate Junit Report"]
+    },
+    { // flutter test --update-goldens --machine | tojunit -o reports\test\test.xml
+      "type": "flutter",
+      "command": "flutter",
+      "args": [
+        "test",
+        "--update-goldens",
+        "--machine | tojunit",
+        "-o reports/test/test.xml"
+      ],
+      "problemMatcher":[],
+      "label": "Flutter: Test Goldens"
+    },
+    {//junit2html reports\test\test.xml reports\test\test.html
+      "type": "flutter",
+      "command": "flutter",
+      "args": [
+        "junit2html",
+        "reports/test/test.xml",
+        "reports/test/test.html"
+      ],
+      "problemMatcher":[],
+      "label": "Flutter: Generate Junit Report"
+    },
+    {
+      "label":"Flutter: Unit Test Coverage",
+      "dependsOn":[ "Flutter: LCOV", "Flutter: Perl Html LCOV"]
+    },
+    {// flutter test --coverage --coverage-path reports\coverage\lcov.info
+      "type": "flutter",
+      "command": "flutter",
+      "args": [
+        "test",
+        "--coverage",
+        "--coverage-path",
+        "reports/coverage/lcov.info"
+      ],
+      "problemMatcher":[],
+      "label": "Flutter: LCOV"
+    },
+    {// perl C:\ProgramData\chocolatey\lib\lcov\tools\bin\genhtml reports\coverage\lcov.info -o reports\coverage\html
+      "type": "shell",
+      "command": "perl",
+      "args": [
+        "C:/ProgramData/chocolatey/lib/lcov/tools/bin/genhtml",
+        "reports/coverage/lcov/lcov.info",
+        "-o reports/coverage/html"
+      ],
+      "problemMatcher":[],
+      "label": "Flutter: Perl Html LCOV"
+    },
+    {// flutter test --machine | tojunit -o reports\test\test.xml
+      "type":"flutter",
+      "command": "flutter",
+      "args": [
+        "test",
+        "--machine | tojunit",
+        "-o reports/test/test.xml"
+      ],
+      "problemMatcher":[],
+      "label": "Flutter: Unit Test No Coverage"
+    },
+    {
+      "label": "Flutter Unit Test",
+      "dependsOn":["Flutter: Unit Test No Coverage","Flutter: Generate Junit Report", ]
+    },
+    {//chromedriver integration testing
+      "type": "shell",
+      "command": "./chromedriver",
+      "args": [
+         "--port=4444"
+      ],
+      "problemMatcher":[],
+      "label": "Flutter: Chrome Driver Integration Testing"
+    },
+    {// Integration Testing via Web Browser, note widget_screen_test.dart has to be the global calling the other tests
+      "type": "flutter",
+      "command": "flutter",
+      "args": [
+        "drive",
+        "--driver=test_driver/integration_test.dart",
+        "--target=integration_test/widget_screen_test.dart",
+        "-d web-server",
+        "--browser-name=chrome",
+        "--browser-dimension 300,550",
+        "--release",
+        "--web-port=8000"
+      ],
+      "label": "Flutter: Chrome Browser Integration Testing"
+    },
+    //{// Integration Testing via Web Browser, note widget_screen_test.dart has to be the global calling the other tests
+      //"type": "flutter",
+      //"command": "flutter",
+     // "args": [
+     //   "drive",
+     //   "--driver=test_driver/integration_test.dart",
+     //   "--target=integration_test/widget_screen_test.dart",
+     //   "-d DEVICE_ID",
+     // ],
+      //"label": "Flutter: Integration Testing Mobile"
+    //},
+    {
+      "label": "Flutter: Integration Testing",
+      "dependsOn":["Flutter: Chrome Driver Integration Testing", "Flutter: Chrome Browser Integration Testing"]
+    }
+
+
 
 
 

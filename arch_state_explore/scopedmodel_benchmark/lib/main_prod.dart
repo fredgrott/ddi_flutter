@@ -6,6 +6,7 @@
 
 // Note you can access static via ClassName().staticMember
 
+
 import 'package:scopedmodel_benchmark/app/shared/constants.dart';
 import 'package:scopedmodel_benchmark/main.dart';
 

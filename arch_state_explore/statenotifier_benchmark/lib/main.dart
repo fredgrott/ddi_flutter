@@ -1,5 +1,6 @@
 
 import 'package:flutter/widgets.dart';
+
 import 'package:statenotifier_benchmark/app/myapp.dart';
 
 

@@ -2,15 +2,10 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
-
 import 'package:changenotifier_benchmark/app/listwidget.dart';
 import 'package:changenotifier_benchmark/app/shared/item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-
-
-
-
 
 
 class MyPage extends StatefulWidget {
@@ -25,7 +20,7 @@ class MyPage extends StatefulWidget {
    _MyPageState createState() => _MyPageState();
  }
 
- final items = List<Item>.of(sampleItems);
+ final items = List<Item>.of(list);
 
  class _MyPageState extends State<MyPage> {
    @override

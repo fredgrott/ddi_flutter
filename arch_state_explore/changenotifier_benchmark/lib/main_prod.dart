@@ -6,6 +6,8 @@
 
 // Note you can access static via ClassName().staticMember
 
+
+
 import 'package:changenotifier_benchmark/app/shared/constants.dart';
 import 'package:changenotifier_benchmark/main.dart';
 

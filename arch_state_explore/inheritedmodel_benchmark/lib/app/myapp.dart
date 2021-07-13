@@ -8,7 +8,6 @@ import 'package:inheritedmodel_benchmark/app/page.dart';
 
 
 
-
 class MyApp extends StatelessWidget {
    @override
    Widget build(BuildContext context) {

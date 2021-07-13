@@ -3,7 +3,10 @@
 // license that can be found in the LICENSE file.
 
 
+
 // Note you can access static via ClassName().staticMember
+
+
 
 
 import 'package:changenotifier_benchmark/app/shared/constants.dart';

@@ -7,10 +7,6 @@ import 'package:flutter/widgets.dart';
 import 'package:inheritedmodel_benchmark/app/listwidget.dart';
 import 'package:inheritedmodel_benchmark/app/shared/item.dart';
 
-
-
-
-
 class MyPage extends StatefulWidget {
    const MyPage({
      required Key key,
@@ -23,7 +19,7 @@ class MyPage extends StatefulWidget {
    _MyPageState createState() => _MyPageState();
  }
 
- final items = List<Item>.of(sampleItems);
+ final items = List<Item>.of(list);
 
  class _MyPageState extends State<MyPage> {
    @override
