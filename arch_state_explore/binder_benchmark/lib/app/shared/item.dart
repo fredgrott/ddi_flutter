@@ -19,4 +19,4 @@ class Item {
 
 
 
-final List<Item> list = List.generate(1000, (index) => Item(index+1, index+1));
+final List<Item> list = List.generate(100, (index) => Item(index+1, index+1));
