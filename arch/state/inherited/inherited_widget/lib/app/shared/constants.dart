@@ -20,7 +20,7 @@ class Constants {
         break;
     }
   }
-  
+
   // getters will match the setting variables in the _Config class
   dynamic get whereAmI {
     return _config[_Config.whereAmI];

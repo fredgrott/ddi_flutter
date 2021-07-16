@@ -7,24 +7,49 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:inherited_widget/app/bizlogic_controllers/countprovider.dart';
+import 'package:inherited_widget/app/myapp.dart';
+import 'package:mocktail/mocktail.dart';
 
-import 'package:inherited_widget/main.dart';
+// we use a way to mock to verify behavior, including all the use case domain stuff
+class MyCounter{
+  late int count;
+  dynamic increment() {
+    count++;
+  }
+}
+
+
+class MockCounter extends Mock implements MyCounter {}
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+  group('Counter', () {
+    late Counter counter;
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    setUp(() {
+      counter = MockCounter() as Counter;
+    });
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
+    testWidgets('counter example', (WidgetTester tester) async {
+      await tester.pumpWidget(const MyApp());
+      when<dynamic>(() => counter.increment())
+          .thenReturn(counter.count.toString());
+      
+      // verifies that mock result matches actual counter increment
+      verify<dynamic>(() => counter.increment()).called(1);
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+      // Verify that our counter starts at 0.
+      expect(find.text('0'), findsOneWidget);
+      expect(find.text('1'), findsNothing);
+
+      // Tap the '+' icon and trigger a frame.
+      await tester.tap(find.byIcon(Icons.add));
+      await tester.pump();
+
+      // Verify that our counter has incremented.
+      expect(find.text('0'), findsNothing);
+      expect(find.text('1'), findsOneWidget);
+    });
   });
+  
 }

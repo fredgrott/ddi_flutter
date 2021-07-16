@@ -2,10 +2,13 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
-
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:onion_arch/app/ui_presentation/home/myhomepage.dart';
+import 'package:inherited_widget/app/bizlogic_controllers/countprovider.dart';
+import 'package:inherited_widget/app/shared/app_vars.dart';
+import 'package:inherited_widget/app/ui/home/myhomepage.dart';
+
+
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -14,7 +17,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: appTitle,
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -27,7 +30,11 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: CountProvider(
+        counter: Counter(0),
+        key: const Key('counter'),
+        child: MyHomePage(title: appTitle),
+      ),
     );
   }
 }

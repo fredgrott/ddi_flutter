@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:lifecycle_log/app/myapp.dart';
 
 import 'package:lifecycle_log/app/shared/logging_strategies.dart';
-import 'package:lifecycle_log/app/ui/lifecyclewatcher.dart';
+
 
 
 void mainDelegate() => myMainDelegate();
@@ -12,5 +13,5 @@ void myMainDelegate() {
   
 
   myLogger.info("app initialized");
-  runApp(const LifecycleWatcher());
+  runApp(const MyApp());
 }

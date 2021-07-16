@@ -4,8 +4,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:lifecycle_log/app/ui/home/myhomepage.dart';
 import 'package:lifecycle_log/app/shared/app_vars.dart';
+import 'package:lifecycle_log/app/ui/home/myhomepage.dart';
 
 
 class MyApp extends StatelessWidget {
