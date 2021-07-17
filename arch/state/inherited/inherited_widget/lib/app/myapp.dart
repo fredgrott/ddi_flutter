@@ -5,6 +5,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:inherited_widget/app/bizlogic_controllers/countprovider.dart';
+import 'package:inherited_widget/app/domain/models/counter.dart';
 import 'package:inherited_widget/app/shared/app_vars.dart';
 import 'package:inherited_widget/app/ui/home/myhomepage.dart';
 

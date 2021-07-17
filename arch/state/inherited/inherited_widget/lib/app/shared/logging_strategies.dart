@@ -180,6 +180,7 @@ class CoreAppLogger implements LoggingTypes {
   // TODO: implement appLogger
   Logger get appLogger => _instance as Logger;
 
+  // ignore: unused_element
   CoreAppLogger._internal() {
     _logger = newLogger(appName);
     if (isInDebugMode) {
@@ -207,7 +208,7 @@ class CoreAppLogger implements LoggingTypes {
   }
 
   // ignore: sort_unnamed_constructors_first
-  factory CoreAppLogger() => _instance ?? CoreAppLogger._internal();
+  factory CoreAppLogger() => _instance;
 
   
 

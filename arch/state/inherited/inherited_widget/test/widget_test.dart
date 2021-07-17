@@ -7,7 +7,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:inherited_widget/app/bizlogic_controllers/countprovider.dart';
+import 'package:inherited_widget/app/domain/models/counter.dart';
+
 import 'package:inherited_widget/app/myapp.dart';
 import 'package:mocktail/mocktail.dart';
 

@@ -5,7 +5,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:inherited_widget/app/bizlogic_controllers/countprovider.dart';
-import 'package:inherited_widget/app/ui/lifecyclereactor.dart';
+
 
 
 
@@ -27,7 +27,7 @@ class MyHomePage extends StatefulWidget {
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends LifecycleStatefulReactor<MyHomePage> {
+class _MyHomePageState extends State<MyHomePage> {
   late dynamic counterProvider;
 
   void _incrementCounter() {

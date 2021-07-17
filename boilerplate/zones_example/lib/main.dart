@@ -12,12 +12,12 @@ import 'package:zones_example/app/shared/logging_strategies.dart';
 // redirects to this mainDelegate() function and
 // thus dart is able to pick this up via the cmd-line
 // compile(run) -t main_dev.dart
-void mainDelegate() => appMain();
+void mainDelegate() => main();
 
 final myLogger = CoreAppLogger().appLogger;
 
 // ignore: prefer_void_to_null
-Future<Null> appMain() async {
+Future<Null> main() async {
   // an internal FlutterError reporter that dumps to console
   FlutterError.onError = (FlutterErrorDetails details) async {
     if (isInDebugMode) {

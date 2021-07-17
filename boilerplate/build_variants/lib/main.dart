@@ -6,6 +6,6 @@ import 'package:flutter/widgets.dart';
 // redirects to this mainDelegate() function and 
 // thus dart is able to pick this up via the cmd-line
 // compile(run) -t main_dev.dart
-void mainDelegate() => runApp(const MyApp());
+void main() => runApp(const MyApp());
 
 

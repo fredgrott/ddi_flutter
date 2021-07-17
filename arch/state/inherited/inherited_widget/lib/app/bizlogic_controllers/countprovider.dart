@@ -3,9 +3,11 @@
 // license that can be found in the LICENSE file.
 
 import 'package:flutter/widgets.dart';
+import 'package:inherited_widget/app/domain/models/counter.dart';
 
 class CountProvider extends InheritedWidget {
   // ignore: annotate_overrides
+  // ignore: overridden_fields
   final Widget child;
   final Counter counter;
   const CountProvider({required Key key, required this.child, required this.counter})
@@ -23,10 +25,4 @@ class CountProvider extends InheritedWidget {
   }
 }
 
-class Counter {
-  int count;
-  Counter(this.count);
-  dynamic increment() {
-    count++;
-  }
-}
+

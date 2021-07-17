@@ -12,10 +12,10 @@ import 'package:flutter/widgets.dart';
 // redirects to this mainDelegate() function and
 // thus dart is able to pick this up via the cmd-line
 // compile(run) -t main_dev.dart
-void mainDelegate() => appMain();
+void mainDelegate() => main();
 
 // ignore: prefer_void_to_null
-Future<Null> appMain() async {
+Future<Null> main() async {
 
   // an internal FlutterError reporter that dumps to console
   FlutterError.onError = (FlutterErrorDetails details) async {

@@ -4,11 +4,12 @@
 
 
 
-// Note you can access static via ClassName().staticMember
 
 
-import 'package:onion_arch/app/shared/constants.dart';
-import 'package:onion_arch/main.dart';
+
+
+import 'package:inherited_databinding/app/shared/constants.dart';
+import 'package:inherited_databinding/main.dart';
 
 void main() {
   Constants().setEnvironment(Environment.dev);

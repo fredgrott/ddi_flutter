@@ -5,11 +5,13 @@ import 'package:inherited_widget/app/shared/logging_strategies.dart';
 
 
 
-void mainDelegate() => myMainDelegate();
+void mainDelegate() => main();
 
 final myLogger = CoreAppLogger().appLogger;
 
-void myMainDelegate() {
+void main() {
+
+  WidgetsFlutterBinding.ensureInitialized();
   
 
   myLogger.info("app initialized");
