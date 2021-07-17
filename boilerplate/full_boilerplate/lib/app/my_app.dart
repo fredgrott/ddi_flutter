@@ -12,6 +12,7 @@ import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 import 'package:full_boilerplate/app/shared/app_vars.dart';
 import 'package:full_boilerplate/app/shared/my_cupertino_color_scheme.dart';
 import 'package:full_boilerplate/app/shared/my_cupertino_text_theme.dart';
+import 'package:full_boilerplate/app/shared/my_material_theme_data.dart';
 import 'package:full_boilerplate/app/ui/home/my_homepage.dart';
 
 
@@ -57,8 +58,8 @@ class MyAppState extends State<MyApp> {
           title: myAppTitle,
           material: (_, __) {
             return MaterialAppData(
-              theme: ThemeData.from(colorScheme: const ColorScheme.light()),
-              darkTheme: ThemeData.from(colorScheme: const ColorScheme.dark()),
+              theme: lightTheme,
+              darkTheme: darkTheme,
               themeMode: brightness == Brightness.light
                   ? ThemeMode.light
                   : ThemeMode.dark,
