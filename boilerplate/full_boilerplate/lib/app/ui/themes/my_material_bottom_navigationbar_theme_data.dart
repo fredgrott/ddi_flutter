@@ -3,8 +3,8 @@
 // license that can be found in the LICENSE file.
 
 import 'package:flutter/material.dart';
-import 'package:full_boilerplate/app/shared/my_color_scheme.dart';
-import 'package:full_boilerplate/app/shared/my_material_icon_theme_data.dart';
+import 'package:full_boilerplate/app/ui/themes/my_color_scheme.dart';
+import 'package:full_boilerplate/app/ui/themes/my_material_icon_theme_data.dart';
 
 BottomNavigationBarThemeData myMaterialBottomNavigationBarThemeData =
     BottomNavigationBarThemeData(

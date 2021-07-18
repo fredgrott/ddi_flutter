@@ -4,7 +4,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:full_boilerplate/app/shared/my_color_scheme.dart';
+import 'package:full_boilerplate/app/ui/themes/my_color_scheme.dart';
 
 IconThemeData myMaterialSelectedIconThemeData = IconThemeData(
   opacity: 0,

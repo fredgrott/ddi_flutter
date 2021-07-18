@@ -40,7 +40,7 @@
 
 
 import 'package:flutter/cupertino.dart';
-import 'package:full_boilerplate/app/shared/my_cupertino_color_scheme.dart';
+import 'package:full_boilerplate/app/ui/themes/my_cupertino_color_scheme.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 CupertinoTextThemeData myCupertinoTextThemeData = CupertinoTextThemeData(

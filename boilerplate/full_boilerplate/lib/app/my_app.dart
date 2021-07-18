@@ -10,10 +10,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 import 'package:full_boilerplate/app/shared/app_vars.dart';
-import 'package:full_boilerplate/app/shared/my_cupertino_color_scheme.dart';
-import 'package:full_boilerplate/app/shared/my_cupertino_text_theme.dart';
-import 'package:full_boilerplate/app/shared/my_material_theme_data.dart';
 import 'package:full_boilerplate/app/ui/home/my_homepage.dart';
+import 'package:full_boilerplate/app/ui/themes/my_cupertino_color_scheme.dart';
+import 'package:full_boilerplate/app/ui/themes/my_cupertino_text_theme.dart';
+import 'package:full_boilerplate/app/ui/themes/my_material_theme_data.dart';
 
 
 
