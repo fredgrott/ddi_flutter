@@ -5,7 +5,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
-import 'package:full_boilerplate/app/ui/themes/my_color_scheme.dart';
+import 'package:full_boilerplate/app/ui/themes/my_color_schemes.dart';
+
 
 MaterialTextFieldData myMaterialTexFieldData = MaterialTextFieldData(
   widgetKey: const Key('textfield'),
@@ -22,7 +23,7 @@ MaterialTextFieldData myMaterialTexFieldData = MaterialTextFieldData(
   enabled: true,
   cursorWidth: 10,
   cursorRadius: Radius.zero,
-  cursorColor: MyColorScheme.primary,
+  cursorColor: myColorSchemes.primary,
   scrollPadding: EdgeInsets.zero,
   enableInteractiveSelection: true,
 

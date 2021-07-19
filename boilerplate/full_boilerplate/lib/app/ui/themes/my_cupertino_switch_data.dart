@@ -5,12 +5,13 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
-import 'package:full_boilerplate/app/ui/themes/my_cupertino_color_scheme.dart';
+import 'package:full_boilerplate/app/ui/themes/my_color_schemes.dart';
+
 
 CupertinoSwitchData myCupertinoSwitchData = CupertinoSwitchData(
   widgetKey: const Key('switch'),
   value: true,
-  activeColor: myCupertinoPrimaryColor,
+  activeColor: myColorSchemes.primary,
   dragStartBehavior: DragStartBehavior.down,
-  trackColor: myCupertinoPrimaryContrastingColor,
+  trackColor: myColorSchemes.primaryVariant,
 );

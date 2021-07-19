@@ -7,10 +7,20 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
+import 'package:full_boilerplate/app/ui/themes/my_color_schemes.dart';
+
 
 
 CupertinoNavigationBarData myCupertinoNavigationBarData = CupertinoNavigationBarData(
   brightness: Brightness.light,
   // when using background images in screens
-  backgroundColor: Colors.transparent,
+  backgroundColor: myColorSchemes.background,
+  automaticallyImplyLeading: true,
+  previousPageTitle: '',
+  automaticallyImplyMiddle: true,
+  padding: EdgeInsetsDirectional.zero,
+  border: Border.all(color: myColorSchemes.primary,),
+  transitionBetweenRoutes: true,
+  // ignore: avoid_redundant_argument_values
+  noMaterialParent: false,
 );

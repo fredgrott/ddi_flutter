@@ -5,15 +5,16 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
-import 'package:full_boilerplate/app/ui/themes/my_cupertino_color_scheme.dart';
+import 'package:full_boilerplate/app/ui/themes/my_color_schemes.dart';
+
 
 CupertinoButtonData myCupertinoButtonData = CupertinoButtonData(
   widgetKey: const Key('button'),
-  color: myCupertinoPrimaryColor,
+  color: myColorSchemes.primary,
   padding: EdgeInsetsGeometry.infinity,
   disabledColor: CupertinoColors.inactiveGray,
   borderRadius: BorderRadius.zero,
   minSize: 10,
   pressedOpacity: 20,
-  
+  alignment: AlignmentDirectional.bottomCenter,
 );

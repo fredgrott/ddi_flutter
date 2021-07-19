@@ -4,4 +4,9 @@
 
 import 'package:flutter/material.dart';
 
-RadioThemeData myMaterialRadioThemeData = RadioThemeData();
+RadioThemeData myMaterialRadioThemeData = RadioThemeData(
+ visualDensity: VisualDensity.adaptivePlatformDensity,
+ materialTapTargetSize: MaterialTapTargetSize.padded,
+ splashRadius: 14,
+
+);

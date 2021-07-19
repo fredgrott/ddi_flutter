@@ -6,18 +6,19 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
-import 'package:full_boilerplate/app/ui/themes/my_color_scheme.dart';
+import 'package:full_boilerplate/app/ui/themes/my_color_schemes.dart';
+
 
 MaterialSwitchData myMaterialSwitchData = MaterialSwitchData(
   widgetKey: const Key('switch'),
-  activeColor: MyColorScheme.primaryVariant,
+  activeColor: myColorSchemes.primaryVariant,
   dragStartBehavior: DragStartBehavior.down,
-  activeTrackColor: MyColorScheme.secondary,
+  activeTrackColor: myColorSchemes.secondary,
   inactiveThumbColor: Colors.grey,
   inactiveTrackColor: Colors.grey,
   materialTapTargetSize: MaterialTapTargetSize.padded,
-  focusColor: MyColorScheme.primaryVariant,
-  hoverColor: MyColorScheme.secondary,
+  focusColor: myColorSchemes.primaryVariant,
+  hoverColor: myColorSchemes.secondary,
   autofocus: true,
   mouseCursor: MouseCursor.defer,
   splashRadius: 12,

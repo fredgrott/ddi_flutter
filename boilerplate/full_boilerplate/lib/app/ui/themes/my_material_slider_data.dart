@@ -5,7 +5,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
-import 'package:full_boilerplate/app/ui/themes/my_color_scheme.dart';
+import 'package:full_boilerplate/app/ui/themes/my_color_schemes.dart';
+
 
 MaterialSliderData myMaterialSliderData = MaterialSliderData(
   widgetKey: const Key('slider'),
@@ -13,7 +14,7 @@ MaterialSliderData myMaterialSliderData = MaterialSliderData(
   divisions: 20,
   min: 10,
   max: 40,
-  activeColor: MyColorScheme.primary,
+  activeColor: myColorSchemes.primary,
   inactiveColor: Colors.grey,
   label: '',
   mouseCursor: MouseCursor.defer,

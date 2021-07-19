@@ -7,4 +7,7 @@ import 'package:flutter/material.dart';
 ScrollbarThemeData myMaterialScrollbarThemeData = const ScrollbarThemeData(
   isAlwaysShown: true,
   interactive: true,
+  minThumbLength: 12,
+  radius: Radius.circular(12),
+  showTrackOnHover: true,
 );

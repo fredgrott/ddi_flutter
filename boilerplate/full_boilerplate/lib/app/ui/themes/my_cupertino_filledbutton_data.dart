@@ -14,5 +14,6 @@ CupertinoFilledButtonData myCupertinoFilledButtonData =
       borderRadius: BorderRadius.zero,
       minSize: 12,
       pressedOpacity: 10,
+      alignment: AlignmentDirectional.bottomCenter,
       
     );

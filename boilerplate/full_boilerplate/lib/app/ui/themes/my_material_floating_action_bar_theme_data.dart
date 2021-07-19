@@ -3,15 +3,20 @@
 // license that can be found in the LICENSE file.
 
 import 'package:flutter/material.dart';
-import 'package:full_boilerplate/app/ui/themes/my_color_scheme.dart';
+import 'package:full_boilerplate/app/ui/themes/my_color_schemes.dart';
+
 
 
 FloatingActionButtonThemeData myMaterialFloatingActionBarThemeData = FloatingActionButtonThemeData(
   enableFeedback: true,
   elevation: 10,
-  splashColor: MyColorScheme.primaryVariant,
-  focusColor: MyColorScheme.secondary,
-  hoverColor: MyColorScheme.secondaryVariant,
-  foregroundColor: MyColorScheme.surface,
-  backgroundColor: MyColorScheme.background,
+  splashColor: myColorSchemes.primaryVariant,
+  focusColor: myColorSchemes.secondary,
+  hoverColor: myColorSchemes.secondaryVariant,
+  foregroundColor: myColorSchemes.surface,
+  backgroundColor: myColorSchemes.background,
+  disabledElevation: 8,
+  focusElevation: 14,
+  hoverElevation: 16,
+  highlightElevation: 18,
 );

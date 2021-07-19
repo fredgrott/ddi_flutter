@@ -4,28 +4,29 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:full_boilerplate/app/ui/themes/my_color_scheme.dart';
+import 'package:full_boilerplate/app/ui/themes/my_color_schemes.dart';
+
 
 IconThemeData myMaterialSelectedIconThemeData = IconThemeData(
   opacity: 0,
   size: 45,
-  color: MyColorScheme.primary,
+  color: myColorSchemes.primary,
 );
 
 IconThemeData myMaterialUnselectedIconThemeData = IconThemeData(
   opacity: 0,
   size: 45,
-  color:MyColorScheme.primary,
+  color:myColorSchemes.primaryVariant,
 );
 
 IconThemeData myMaterialIconThemeData = IconThemeData(
   opacity: 0,
   size: 45,
-  color: MyColorScheme.primary,
+  color: myColorSchemes.primary,
 );
 
 IconThemeData myMaterialActionsIconThemeData = IconThemeData(
   opacity: 0,
   size: 45,
-  color: MyColorScheme.primary,
+  color: myColorSchemes.primaryVariant,
 );

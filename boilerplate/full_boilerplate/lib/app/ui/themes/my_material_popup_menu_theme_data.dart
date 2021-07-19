@@ -3,13 +3,15 @@
 // license that can be found in the LICENSE file.
 
 import 'package:flutter/material.dart';
-import 'package:full_boilerplate/app/ui/themes/my_color_scheme.dart';
+import 'package:full_boilerplate/app/ui/themes/my_color_schemes.dart';
+
 
 PopupMenuThemeData myMaterialPopupMenuThemeData = PopupMenuThemeData(
   elevation: 4,
-  color: MyColorScheme.primary,
+  color: myColorSchemes.primary,
   enableFeedback: true,
   textStyle: myMaterialPopupMenuTextStyle,
+  shape: const RoundedRectangleBorder(),
 );
 
 TextStyle myMaterialPopupMenuTextStyle = TextStyle();

@@ -3,7 +3,8 @@
 // license that can be found in the LICENSE file.
 
 import 'package:flutter/material.dart';
-import 'package:full_boilerplate/app/ui/themes/my_color_scheme.dart';
+import 'package:full_boilerplate/app/ui/themes/my_color_schemes.dart';
+
 import 'package:full_boilerplate/app/ui/themes/my_material_icon_theme_data.dart';
 
 BottomNavigationBarThemeData myMaterialBottomNavigationBarThemeData =
@@ -13,11 +14,11 @@ BottomNavigationBarThemeData myMaterialBottomNavigationBarThemeData =
       showUnselectedLabels: true,
       enableFeedback: true,
       type: BottomNavigationBarType.fixed,
-      backgroundColor: MyColorScheme.background,
+      backgroundColor: myColorSchemes.background,
       selectedIconTheme: myMaterialSelectedIconThemeData,
       unselectedIconTheme: myMaterialUnselectedIconThemeData,
-      selectedItemColor: MyColorScheme.primaryVariant,
-      unselectedItemColor: MyColorScheme.secondary,
+      selectedItemColor: myColorSchemes.primaryVariant,
+      unselectedItemColor: myColorSchemes.secondary,
       unselectedLabelStyle: myUnselectedLabelStyle,
       selectedLabelStyle: mySelectedLabelStyle,
     );

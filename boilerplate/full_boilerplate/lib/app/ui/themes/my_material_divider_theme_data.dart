@@ -3,10 +3,11 @@
 // license that can be found in the LICENSE file.
 
 import 'package:flutter/material.dart';
-import 'package:full_boilerplate/app/ui/themes/my_color_scheme.dart';
+import 'package:full_boilerplate/app/ui/themes/my_color_schemes.dart';
+
 
 DividerThemeData myMaterialDividerThemeData = DividerThemeData(
-  color: MyColorScheme.secondaryVariant,
+  color: myColorSchemes.secondaryVariant,
   thickness: 10,
   indent: 2,
   space: 2,

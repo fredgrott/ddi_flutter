@@ -4,13 +4,15 @@
 
 import 'package:flutter/widgets.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
-import 'package:full_boilerplate/app/ui/themes/my_color_scheme.dart';
+import 'package:full_boilerplate/app/ui/themes/my_color_schemes.dart';
+
 
 MaterialProgressIndicatorData myMaterialProgressIndicatorData = MaterialProgressIndicatorData(
   key: const Key('progressindicator'),
-  backgroundColor: MyColorScheme.background,
+  backgroundColor: myColorSchemes.background,
   strokeWidth: 12,
   value: 12,
   semanticsLabel: '',
-  color: MyColorScheme.primary,
+  semanticsValue: '',
+  color: myColorSchemes.primary,
 );

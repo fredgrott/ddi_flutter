@@ -3,10 +3,11 @@
 // license that can be found in the LICENSE file.
 
 import 'package:flutter/material.dart';
-import 'package:full_boilerplate/app/ui/themes/my_color_scheme.dart';
+import 'package:full_boilerplate/app/ui/themes/my_color_schemes.dart';
+
 
 ButtonThemeData myMaterialButtonThemeData = ButtonThemeData(
-  colorScheme: MyColorScheme,
+  colorScheme: myColorSchemes,
   padding: EdgeInsetsGeometry.infinity,
   alignedDropdown: true,
   // ignore: avoid_redundant_argument_values

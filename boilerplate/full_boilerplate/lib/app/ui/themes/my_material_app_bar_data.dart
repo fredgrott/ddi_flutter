@@ -17,6 +17,14 @@ MaterialAppBarData myMaterialAppBarData = MaterialAppBarData(
   backgroundColor: Colors.transparent,
   elevation: 0,
   bottomOpacity: 90,
+  systemOverlayStyle: SystemUiOverlayStyle.light,
+  toolbarTextStyle: myMaterialToolbarTextStyle,
+  toolbarHeight: 66,
+  excludeHeaderSemantics: true,
+  toolbarOpacity: 4,
+  titleSpacing: 4,
+  primary: true,
+  leadingWidth: 4,
   
 );
 
@@ -28,3 +36,5 @@ TextTheme myMaterialTitleTextTheme = const TextTheme(
     fontWeight: FontWeight.bold  
     )
 );
+
+TextStyle myMaterialToolbarTextStyle = const TextStyle();

@@ -5,6 +5,6 @@
 import 'package:flutter/material.dart';
 
 // so we can specify page transitions per platform targeted
-PageTransitionsTheme myMaterialPageTransitionTheme = PageTransitionsTheme(
+PageTransitionsTheme myMaterialPageTransitionTheme = const PageTransitionsTheme(
 
 );

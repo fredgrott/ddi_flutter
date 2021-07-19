@@ -40,12 +40,13 @@
 
 
 import 'package:flutter/cupertino.dart';
-import 'package:full_boilerplate/app/ui/themes/my_cupertino_color_scheme.dart';
+import 'package:full_boilerplate/app/ui/themes/my_color_schemes.dart';
+
 import 'package:google_fonts/google_fonts.dart';
 
 CupertinoTextThemeData myCupertinoTextThemeData = CupertinoTextThemeData(
     // ignore: avoid_redundant_argument_values
-    primaryColor: myCupertinoPrimaryColor,
+    primaryColor: myColorSchemes.primary,
     textStyle: myKDefaultTextStyle,
     actionTextStyle: myKDefaultActionTextStyle,
     tabLabelTextStyle: myKDefaultTabLabelTextStyle,

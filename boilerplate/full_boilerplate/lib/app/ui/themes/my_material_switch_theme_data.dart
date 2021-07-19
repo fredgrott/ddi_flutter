@@ -6,4 +6,5 @@ import 'package:flutter/material.dart';
 
 SwitchThemeData myMaterialSwitchThemeData = const SwitchThemeData(
   splashRadius: 14,
+  materialTapTargetSize: MaterialTapTargetSize.padded,
 );

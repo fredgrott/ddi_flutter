@@ -3,12 +3,13 @@
 // license that can be found in the LICENSE file.
 
 import 'package:flutter/material.dart';
-import 'package:full_boilerplate/app/ui/themes/my_color_scheme.dart';
+import 'package:full_boilerplate/app/ui/themes/my_color_schemes.dart';
+
 
 SnackBarThemeData myMaterialSnackbarThemeData = SnackBarThemeData(
-  backgroundColor: MyColorScheme.background,
+  backgroundColor: myColorSchemes.background,
   elevation: 4,
   behavior: SnackBarBehavior.fixed,
-  actionTextColor: MyColorScheme.primaryVariant,
-  disabledActionTextColor: MyColorScheme.secondaryVariant,
+  actionTextColor: myColorSchemes.primaryVariant,
+  disabledActionTextColor: myColorSchemes.secondaryVariant,
 );

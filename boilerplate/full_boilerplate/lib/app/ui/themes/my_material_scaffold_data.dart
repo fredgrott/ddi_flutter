@@ -13,6 +13,7 @@ MaterialScaffoldData myMaterialScaffoldData = MaterialScaffoldData(
   // engine and our Flutter app and its only needed on 
   // android
   // ignore: prefer-trailing-comma
-  resizeToAvoidBottomInset: false
+  resizeToAvoidBottomInset: false,
+  restorationId: '',
 
 );
