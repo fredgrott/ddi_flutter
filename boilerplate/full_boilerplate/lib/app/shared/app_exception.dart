@@ -7,3 +7,24 @@ class AppException implements Exception {
     return 'an app exception';
   }
 }
+
+// borrowed from portal, example of error class 
+// so that we can do specialized throws.
+//
+// Type is the class where we want to throw
+class AppError<T extends Type> extends Error {
+
+  AppError._(this._object);
+
+
+
+
+  late final Object _object;
+
+  @override
+  String toString() {
+    return '''
+Error: Could not find a $T above this $_object.
+''';
+  }
+}

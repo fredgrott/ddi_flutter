@@ -3,6 +3,7 @@
 // license that can be found in the LICENSE file.
 
 import 'package:flutter/material.dart';
+import 'package:full_boilerplate/app/ui/themes/my_app_textstyles.dart';
 import 'package:full_boilerplate/app/ui/themes/my_material_appbar_theme.dart';
 import 'package:full_boilerplate/app/ui/themes/my_material_banner_theme_data.dart';
 import 'package:full_boilerplate/app/ui/themes/my_material_bottom_appbar_theme_data.dart';
@@ -21,13 +22,13 @@ import 'package:full_boilerplate/app/ui/themes/my_material_popup_menu_theme_data
 import 'package:full_boilerplate/app/ui/themes/my_material_radio_theme_data.dart';
 import 'package:full_boilerplate/app/ui/themes/my_material_rail_navigation_theme_data.dart';
 import 'package:full_boilerplate/app/ui/themes/my_material_scrollbar_theme_data.dart';
-import 'package:full_boilerplate/app/ui/themes/my_material_slider_theme_data.dart';
+
 import 'package:full_boilerplate/app/ui/themes/my_material_snackbar_theme_data.dart';
-import 'package:full_boilerplate/app/ui/themes/my_material_switch_theme_data.dart';
+
 import 'package:full_boilerplate/app/ui/themes/my_material_tab_bar_theme_data.dart';
 import 'package:full_boilerplate/app/ui/themes/my_material_text_button_theme_data.dart';
 import 'package:full_boilerplate/app/ui/themes/my_material_text_selection_theme_data.dart';
-import 'package:full_boilerplate/app/ui/themes/my_material_text_theme.dart';
+
 import 'package:full_boilerplate/app/ui/themes/my_material_time_picker_theme_data.dart';
 import 'package:full_boilerplate/app/ui/themes/my_material_toggle_button_theme_data.dart';
 import 'package:full_boilerplate/app/ui/themes/my_material_tooltip_theme_data.dart';
@@ -35,7 +36,7 @@ import 'package:full_boilerplate/app/ui/themes/my_material_tooltip_theme_data.da
 ThemeData lightTheme =
     ThemeData.from(colorScheme: const ColorScheme.light()).copyWith(
   cardTheme: myMaterialCardTheme,
-  textTheme: myMaterialTextTheme,
+  textTheme:  myBaseTextTheme,
   buttonTheme: myMaterialButtonThemeData,
   bannerTheme: myMaterialBannerThemeData,
   bottomAppBarTheme: myMaterialBottomAppbarTheme,
@@ -74,7 +75,7 @@ ThemeData lightTheme =
 ThemeData darkTheme =
     ThemeData.from(colorScheme: const ColorScheme.dark()).copyWith(
   cardTheme: myMaterialCardTheme,
-  textTheme: myMaterialTextTheme,
+  textTheme:  myBaseTextTheme,
   buttonTheme: myMaterialButtonThemeData,
   bannerTheme: myMaterialBannerThemeData,
   bottomAppBarTheme: myMaterialBottomAppbarTheme,

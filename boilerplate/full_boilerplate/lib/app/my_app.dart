@@ -53,6 +53,7 @@ class MyAppState extends State<MyApp> {
           title: myAppTitle,
           material: (_, __) {
             return MaterialAppData(
+              navigatorKey: navigatorKey,
               theme: lightTheme,
               darkTheme: darkTheme,
               themeMode: brightness == Brightness.light
@@ -61,8 +62,10 @@ class MyAppState extends State<MyApp> {
             );
           },
           cupertino: (_, __) => CupertinoAppData(
+            navigatorKey: navigatorKey,
             // flows the Material Theme lightTheme through all the Cupertino stuff
             theme: myMaterialBasedCupertinoThemeData,
+            
             
           ),
           home: MyHomePage(title: myAppTitle),

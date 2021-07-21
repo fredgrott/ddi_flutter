@@ -5,4 +5,7 @@
 import 'package:flutter/material.dart';
 import 'package:full_boilerplate/app/ui/themes/my_material_theme_data.dart';
 
-MaterialBasedCupertinoThemeData myMaterialBasedCupertinoThemeData = MaterialBasedCupertinoThemeData(materialTheme: lightTheme);
+MaterialBasedCupertinoThemeData myMaterialBasedCupertinoThemeData = MaterialBasedCupertinoThemeData(
+  materialTheme: lightTheme,
+  
+  );
