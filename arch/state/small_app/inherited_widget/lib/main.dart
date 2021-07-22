@@ -8,8 +8,10 @@ import 'package:inherited_widget/app/my_app.dart';
 import 'package:inherited_widget/app/shared/app_vars.dart';
 import 'package:inherited_widget/app/shared/build_modes.dart';
 import 'package:inherited_widget/app/shared/catcher.dart';
+import 'package:inherited_widget/app/shared/logging_strategies.dart';
 
 
+final myLogger = CoreAppLogger().appLogger;
 
 
 

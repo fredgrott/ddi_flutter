@@ -2,6 +2,7 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
+
 import 'dart:ui';
 
 import 'package:catcher/catcher.dart';
@@ -9,6 +10,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
+import 'package:inherited_widget/app/domain/bizlogic_controllers/counterprovider.dart';
+import 'package:inherited_widget/app/domain/models/countermodel.dart';
+
 import 'package:inherited_widget/app/shared/app_vars.dart';
 import 'package:inherited_widget/app/ui/home/my_homepage.dart';
 import 'package:inherited_widget/app/ui/themes/my_material_theme_data.dart';
@@ -70,7 +74,8 @@ class MyAppState extends State<MyApp> {
             
             
           ),
-          home: MyHomePage(title: myAppTitle),
+          home: CounterProvider(key: const Key('counterprovider'),myCounter: CounterModel( counter: 0),
+          child: MyHomePage(title: myAppTitle),),
         ),
       ),
     );

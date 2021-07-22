@@ -7,8 +7,10 @@ import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
-import 'package:inherited_widget/app/domain/bizlogic_controllers/counter_store_mixin.dart';
+import 'package:inherited_widget/app/domain/bizlogic_controllers/counterprovider.dart';
+
 import 'package:inherited_widget/app/shared/app_vars.dart';
+import 'package:inherited_widget/app/shared/logging_strategies.dart';
 import 'package:inherited_widget/app/ui/themes/my_cupertino_iconbutton_data.dart';
 import 'package:inherited_widget/app/ui/themes/my_cupertino_navigation_bar_data.dart';
 import 'package:inherited_widget/app/ui/themes/my_cupertino_page_scaffold_data.dart';
@@ -16,10 +18,12 @@ import 'package:inherited_widget/app/ui/themes/my_material_app_bar_data.dart';
 import 'package:inherited_widget/app/ui/themes/my_material_iconbutton_data.dart';
 import 'package:inherited_widget/app/ui/themes/my_material_scaffold_data.dart';
 
+// Note, I do not use FAB as its not fully cross platform. One can either do a 
+// stack positioned, overlay, or flutter_portal to get the fab as cross-platform.
+// Also, I am logging state and view-model changes so that its comparable to 
+// other state management solutions that have that already pre-implemented out of box.
 
-
-
-
+final myLogger = CoreAppLogger().appLogger;
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title, this.message = ""})
@@ -44,7 +48,11 @@ class MyHomePage extends StatefulWidget {
   MyHomePageState createState() => MyHomePageState();
 }
 
-class MyHomePageState extends State<MyHomePage> with CounterStoreMixin {
+// In lift-up-state patterns we would lift the setState method into
+// some type of controller structure.
+
+class MyHomePageState extends State<MyHomePage> {
+  late CounterProvider counterProvider;
   void incrementCounter() {
     setState(() {
       // This call to setState tells the Flutter framework that something has
@@ -52,91 +60,124 @@ class MyHomePageState extends State<MyHomePage> with CounterStoreMixin {
       // so that the display can reflect the updated values. If we changed
       // _counter without calling setState(), then the build method would not be
       // called again, and so nothing would appear to happen.
-      increaseCounter();
+
+      myLogger.info('incrementing view model by one');
+
+      counterProvider.myCounter.increment();
     });
   }
 
   @override
   Widget build(BuildContext context) {
+    counterProvider = CounterProvider.of(context);
     // This method is rerun every time setState is called, for instance as done
     // by the _incrementCounter method above.
     //
     // The Flutter framework has been optimized to make rerunning build methods
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
+
     return AnnotatedRegion<SystemUiOverlayStyle>(
-        value: SystemUiOverlayStyle.dark.copyWith(
-          statusBarColor: Colors.transparent,
-          systemNavigationBarColor: Colors.transparent,
-          systemNavigationBarDividerColor: Colors.transparent,
-        ),
-        child: PlatformScaffold(
-            material: (
-              _,
-              __,
-            ) =>
-                myMaterialScaffoldData,
-            cupertino: (
-              _,
-              __,
-            ) =>
-                myCupertinoPageScaffoldData,
-            appBar: PlatformAppBar(
-              backgroundColor: Colors.transparent,
-              title: PlatformText(myAppTitle, key: const Key('title'), textAlign: TextAlign.center, semanticsLabel: "app title",),
-              material: (
-                _,
-                __,
-              ) =>
-                  myMaterialAppBarData,
-              cupertino: (_, __) => myCupertinoNavigationBarData,
-              trailingActions: <Widget>[
-                PlatformIconButton(
-                  //padding: EdgeInsets.zero,
+      value: SystemUiOverlayStyle.dark.copyWith(
+        statusBarColor: Colors.transparent,
+        systemNavigationBarColor: Colors.transparent,
+        systemNavigationBarDividerColor: Colors.transparent,
+      ),
+      child: PlatformScaffold(
+        material: (
+          _,
+          __,
+        ) =>
+            myMaterialScaffoldData,
+        cupertino: (
+          _,
+          __,
+        ) =>
+            myCupertinoPageScaffoldData,
+        appBar: PlatformAppBar(
+          backgroundColor: Colors.transparent,
+          title: PlatformText(
+            myAppTitle,
+            key: const Key('title'),
+            textAlign: TextAlign.center,
+            semanticsLabel: "app title",
+          ),
+          material: (
+            _,
+            __,
+          ) =>
+              myMaterialAppBarData,
+          cupertino: (_, __) => myCupertinoNavigationBarData,
+          trailingActions: <Widget>[
+            PlatformIconButton(
+              //padding: EdgeInsets.zero,
 
-                  icon: Icon(context.platformIcons.share),
-                  //color: Colors.black87,
-                  material: (_,__) => myMaterialIconButtonData,
-                  cupertino: (_, __) => myCupertinoIconButtonData,
+              icon: Icon(context.platformIcons.share),
+              //color: Colors.black87,
+              material: (_, __) => myMaterialIconButtonData,
+              cupertino: (_, __) => myCupertinoIconButtonData,
 
-                  // ignore: no-empty-block
-                  onPressed: () {},
-                ),
-              ],
+              // ignore: no-empty-block
+              onPressed: () {},
             ),
-            body: Stack(children: <Widget>[
-              Card(child:Center(
-                  // ignore: prefer-trailing-comma
-                  child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
+          ],
+        ),
+        body: Stack(
+          children: <Widget>[
+            Card(
+              child: Center(
+                // ignore: prefer-trailing-comma
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    PlatformText(
+                      "increment",
+                      key: const Key('text'),
+                      textAlign: TextAlign.center,
+                      softWrap: true,
+                      overflow: TextOverflow.clip,
+                      textScaleFactor: 1.0,
+                      maxLines: 2,
+                      semanticsLabel: 'increment the counter',
+                    ),
+                    PlatformText(
+                      '${counterProvider.myCounter.counter}',
+                      key: const Key('text'),
+                      textAlign: TextAlign.center,
+                      softWrap: true,
+                      overflow: TextOverflow.clip,
+                      textScaleFactor: 1.0,
+                      maxLines: 1,
+                      semanticsLabel: 'counter value',
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Positioned(
+              bottom: 54,
+              right: 34,
+              // ignore: prefer-trailing-comma
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                // ignore: prefer-trailing-comma
                 children: <Widget>[
-                  PlatformText("increment", key: const Key('text'), textAlign: TextAlign.center, softWrap: true, overflow: TextOverflow.clip, textScaleFactor: 1.0, maxLines: 2, semanticsLabel: 'increment the counter',),
-                  PlatformText(
-                    '$myCounter', key: const Key('text'), textAlign: TextAlign.center, softWrap: true, overflow: TextOverflow.clip, textScaleFactor: 1.0, maxLines: 1, semanticsLabel: 'counter value',
+                  PlatformIconButton(
+                    key: const Key('increment'),
+                    onPressed: () {
+                      incrementCounter();
+                    },
+                    //padding: EdgeInsets.zero,
+                    icon: Icon(context.platformIcons.addCircledSolid),
+                    material: (_, __) => myMaterialIconButtonData,
+                    cupertino: (_, __) => myCupertinoIconButtonData,
                   ),
                 ],
-              ),), ),
-              
-              Positioned(
-                  bottom: 54,
-                  right: 34,
-                  // ignore: prefer-trailing-comma
-                  child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      // ignore: prefer-trailing-comma
-                      children: <Widget>[
-                        PlatformIconButton(
-                          key: const Key('increment'),
-                          onPressed: () {
-                            incrementCounter();
-                          },
-                          //padding: EdgeInsets.zero,
-                          icon: Icon(context.platformIcons.addCircledSolid),
-                          material: (_, __) => myMaterialIconButtonData,
-                          cupertino: (_, __) => myCupertinoIconButtonData,
-                        ),
-                      ],),),
-            ],),),);
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
-
-
