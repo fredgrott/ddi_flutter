@@ -4,15 +4,16 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
+import 'package:full_boilerplate/app/ui/themes/my_app_common_theme_vars.dart';
 import 'package:full_boilerplate/app/ui/themes/my_color_schemes.dart';
 
 
 CupertinoTabBarData myCupertinoTabBarData = CupertinoTabBarData(
   backgroundColor: CupertinoColors.lightBackgroundGray,
-  activeColor: myColorSchemes.primary,
+  activeColor: myButtonColor,
   widgetKey: const Key('tabbar'),
   iconSize: 44,
   currentIndex: 1,
-  inactiveColor: CupertinoColors.inactiveGray,
+  inactiveColor: myDisabledColor,
   border: Border.all( color: myColorSchemes.primaryVariant),
 );

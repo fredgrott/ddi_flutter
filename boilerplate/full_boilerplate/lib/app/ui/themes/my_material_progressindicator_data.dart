@@ -4,6 +4,7 @@
 
 import 'package:flutter/widgets.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
+import 'package:full_boilerplate/app/ui/themes/my_app_common_theme_vars.dart';
 import 'package:full_boilerplate/app/ui/themes/my_color_schemes.dart';
 
 
@@ -14,5 +15,5 @@ MaterialProgressIndicatorData myMaterialProgressIndicatorData = MaterialProgress
   value: 12,
   semanticsLabel: '',
   semanticsValue: '',
-  color: myColorSchemes.primary,
+  color: myButtonColor,
 );

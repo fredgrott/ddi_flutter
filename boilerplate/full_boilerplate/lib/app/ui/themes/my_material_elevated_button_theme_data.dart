@@ -3,8 +3,10 @@
 // license that can be found in the LICENSE file.
 
 import 'package:flutter/material.dart';
+import 'package:full_boilerplate/app/ui/themes/my_app_buttonstyles.dart';
 
 
-ElevatedButtonThemeData myMaterialElevatedButtonThemeData = const ElevatedButtonThemeData(
+ElevatedButtonThemeData myMaterialElevatedButtonThemeData = ElevatedButtonThemeData(
+  style: myElevateButtonStyle,
   
 );

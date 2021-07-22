@@ -3,6 +3,7 @@
 // license that can be found in the LICENSE file.
 
 import 'package:flutter/material.dart';
+import 'package:full_boilerplate/app/ui/themes/my_app_textstyles.dart';
 import 'package:full_boilerplate/app/ui/themes/my_color_schemes.dart';
 
 
@@ -16,4 +17,7 @@ TimePickerThemeData myMaterialTimePickerThemeData = TimePickerThemeData(
   dialTextColor: myColorSchemes.primary,
   dialHandColor: myColorSchemes.secondary,
   entryModeIconColor: myColorSchemes.secondaryVariant,
+  helpTextStyle: myTimePickerHelpTextStyle,
+  hourMinuteTextStyle: myTimePickerHourTextStyle,
+  dayPeriodTextStyle: myTimePickerDayTextStyle,
 );

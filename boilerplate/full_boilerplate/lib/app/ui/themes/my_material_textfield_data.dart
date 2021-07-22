@@ -5,6 +5,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
+import 'package:full_boilerplate/app/ui/themes/my_app_textstyles.dart';
 import 'package:full_boilerplate/app/ui/themes/my_color_schemes.dart';
 
 
@@ -26,5 +27,7 @@ MaterialTextFieldData myMaterialTexFieldData = MaterialTextFieldData(
   cursorColor: myColorSchemes.primary,
   scrollPadding: EdgeInsets.zero,
   enableInteractiveSelection: true,
+  style: myTextFieldTextStyle,
+  strutStyle: myTextFieldStrutStyle,
 
 );

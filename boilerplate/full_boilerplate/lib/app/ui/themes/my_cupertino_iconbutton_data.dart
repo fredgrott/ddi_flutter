@@ -5,16 +5,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
-import 'package:full_boilerplate/app/ui/themes/my_color_schemes.dart';
+import 'package:full_boilerplate/app/ui/themes/my_app_common_theme_vars.dart';
+
 
 
 CupertinoIconButtonData myCupertinoIconButtonData = CupertinoIconButtonData(
   widgetKey: const Key('iconbutton'),
   padding: EdgeInsets.zero,
-  color: myColorSchemes.primary,
-  disabledColor: Colors.grey,
+  color: myButtonColor,
+  disabledColor: myDisabledColor,
   minSize: 22,
   pressedOpacity: 10,
   alignment: AlignmentDirectional.bottomCenter,
+  borderRadius: BorderRadius.zero,
   
 );

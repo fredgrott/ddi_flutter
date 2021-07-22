@@ -7,6 +7,8 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
+import 'package:full_boilerplate/app/ui/themes/my_app_common_theme_vars.dart';
+
 import 'package:full_boilerplate/app/ui/themes/my_color_schemes.dart';
 
 
@@ -16,7 +18,7 @@ CupertinoNavigationBarData myCupertinoNavigationBarData = CupertinoNavigationBar
   // when using background images in screens
   backgroundColor: myColorSchemes.background,
   automaticallyImplyLeading: true,
-  previousPageTitle: '',
+  previousPageTitle: previousPageTitle,
   automaticallyImplyMiddle: true,
   padding: EdgeInsetsDirectional.zero,
   border: Border.all(color: myColorSchemes.primary,),

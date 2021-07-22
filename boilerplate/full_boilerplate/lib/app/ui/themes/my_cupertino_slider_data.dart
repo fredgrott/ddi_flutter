@@ -4,16 +4,17 @@
 
 import 'package:flutter/widgets.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
-import 'package:full_boilerplate/app/ui/themes/my_color_schemes.dart';
+import 'package:full_boilerplate/app/ui/themes/my_app_common_theme_vars.dart';
+
 
 
 CupertinoSliderData myCupertinoSliderData = CupertinoSliderData(
   widgetKey: const Key('slider'),
   value: 10,
-  activeColor: myColorSchemes.primary,
+  activeColor: myActiveColor,
   divisions: 10,
   min: 10,
   max: 40,
-  thumbColor: myColorSchemes.primaryVariant,
+  thumbColor: myThumbColor,
 
 );

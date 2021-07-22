@@ -5,20 +5,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
+import 'package:full_boilerplate/app/ui/themes/my_app_common_theme_vars.dart';
 
-import 'package:full_boilerplate/app/ui/themes/my_color_schemes.dart';
+
 
 MaterialIconButtonData myMaterialIconButtonData = MaterialIconButtonData(
   widgetKey: const Key('iconbutton'),
   padding: EdgeInsets.zero,
-  color: myColorSchemes.primary,
-  disabledColor: Colors.grey,
-  highlightColor: myColorSchemes.primaryVariant,
+  color: myButtonColor,
+  disabledColor: myDisabledColor,
+  highlightColor: myHighlightColor,
   iconSize: 12,
-  splashColor: myColorSchemes.secondary,
+  splashColor: mySplashColor,
   tooltip: '',
-  focusColor: myColorSchemes.secondaryVariant,
-  hoverColor: myColorSchemes.secondary,
+  focusColor: myFocusColor,
+  hoverColor: myHoverColor,
   autofocus: true,
   enableFeedback: true,
   visualDensity: VisualDensity.adaptivePlatformDensity,

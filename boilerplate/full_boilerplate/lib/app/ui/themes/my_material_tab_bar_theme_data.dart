@@ -3,6 +3,7 @@
 // license that can be found in the LICENSE file.
 
 import 'package:flutter/material.dart';
+import 'package:full_boilerplate/app/ui/themes/my_app_textstyles.dart';
 import 'package:full_boilerplate/app/ui/themes/my_color_schemes.dart';
 
 
@@ -11,5 +12,7 @@ TabBarTheme myMaterialTabBarTheme = TabBarTheme(
   labelColor: myColorSchemes.primary,
   labelPadding: EdgeInsetsGeometry.infinity,
   unselectedLabelColor: myColorSchemes.secondaryVariant,
+  labelStyle: myTabbarLabelTextStyle,
+  unselectedLabelStyle: myTabbarUnselectedLabelTextStyle,
   
 );

@@ -3,6 +3,7 @@
 // license that can be found in the LICENSE file.
 
 import 'package:flutter/material.dart';
+import 'package:full_boilerplate/app/ui/themes/my_app_textstyles.dart';
 import 'package:full_boilerplate/app/ui/themes/my_color_schemes.dart';
 
 
@@ -14,6 +15,3 @@ DialogTheme myMaterialDialogTheme = DialogTheme(
   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
 );
 
-TextStyle myMaterialDialogTitleTextStyle = TextStyle();
-
-TextStyle myMaterialDialogContentTextStyle = TextStyle();

@@ -9,7 +9,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:full_boilerplate/app/my_app.dart';
 
 import 'package:full_boilerplate/app/shared/app_vars.dart';
-import 'package:full_boilerplate/app/shared/app_vars.dart';
+
 
 import 'package:given_when_then/given_when_then.dart';
 

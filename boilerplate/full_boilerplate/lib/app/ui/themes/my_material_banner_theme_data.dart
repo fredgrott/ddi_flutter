@@ -3,6 +3,7 @@
 // license that can be found in the LICENSE file.
 
 import 'package:flutter/material.dart';
+import 'package:full_boilerplate/app/ui/themes/my_app_textstyles.dart';
 import 'package:full_boilerplate/app/ui/themes/my_color_schemes.dart';
 
 
@@ -10,8 +11,8 @@ MaterialBannerThemeData myMaterialBannerThemeData =
     MaterialBannerThemeData(
   leadingPadding: EdgeInsetsGeometry.infinity,
   padding: EdgeInsetsGeometry.infinity,
-  contentTextStyle: myContentTextStyle,
+  contentTextStyle: myBannerContentTextStyle,
   backgroundColor: myColorSchemes.background,
 );
 
-TextStyle myContentTextStyle = TextStyle();
+

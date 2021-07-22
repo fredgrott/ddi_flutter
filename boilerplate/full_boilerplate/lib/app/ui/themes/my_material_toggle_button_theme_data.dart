@@ -5,6 +5,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
+import 'package:full_boilerplate/app/ui/themes/my_app_common_theme_vars.dart';
 import 'package:full_boilerplate/app/ui/themes/my_color_schemes.dart';
 
 
@@ -15,15 +16,16 @@ ToggleButtonsThemeData myMaterialToggleButtonThemeData = ToggleButtonsThemeData(
   // ignore: avoid_redundant_argument_values
   borderRadius: const BorderRadius.horizontal(left: Radius.zero, right: Radius.zero),
   disabledBorderColor: Colors.grey,
-  color: myColorSchemes.primary,
+  color: myButtonColor,
   selectedColor: myColorSchemes.primaryVariant,
   fillColor: myColorSchemes.secondary,
-  focusColor: myColorSchemes.secondaryVariant,
-  highlightColor: myColorSchemes.secondaryVariant,
-  hoverColor: myColorSchemes.secondary,
-  splashColor: myColorSchemes.primaryVariant,
-  borderColor: myColorSchemes.secondary,
-  selectedBorderColor: myColorSchemes.secondaryVariant,
+  focusColor: myFocusColor,
+  highlightColor: myHighlightColor,
+  hoverColor: myHoverColor,
+  splashColor: mySplashColor,
+  borderColor: myColorSchemes.secondaryVariant,
+  selectedBorderColor: myColorSchemes.primary,
+  
   
   
 

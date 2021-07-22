@@ -5,26 +5,27 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
-import 'package:full_boilerplate/app/ui/themes/my_color_schemes.dart';
+import 'package:full_boilerplate/app/ui/themes/my_app_common_theme_vars.dart';
+
 
 
 MaterialRaisedButtonData myMaterialRaisedButtonData = MaterialRaisedButtonData(
   widgetKey: const Key('raisedbutton'),
-  color: myColorSchemes.primary,
+  color: myButtonColor,
   padding: EdgeInsetsGeometry.infinity,
-  disabledColor: Colors.grey,
+  disabledColor: myDisabledColor,
   disabledElevation: 4,
-  disabledTextColor: Colors.black12,
+  disabledTextColor: myDisabledTextColor,
   elevation: 10,
-  highlightColor: myColorSchemes.primaryVariant,
+  highlightColor: myHighlightColor,
   highlightElevation: 20,
-  splashColor: myColorSchemes.secondary,
-  textColor: myColorSchemes.secondaryVariant,
+  splashColor: mySplashColor,
+  textColor: myButtonTextColor,
   clipBehavior: Clip.hardEdge,
   materialTapTargetSize: MaterialTapTargetSize.padded,
   focusElevation: 14,
-  focusColor: myColorSchemes.primaryVariant,
-  hoverColor: myColorSchemes.secondary,
+  focusColor: myFocusColor,
+  hoverColor: myHoverColor,
   hoverElevation: 16,
   autofocus: true,
   mouseCursor: MouseCursor.defer,

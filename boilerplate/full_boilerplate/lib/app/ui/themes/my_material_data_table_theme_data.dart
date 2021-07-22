@@ -3,6 +3,7 @@
 // license that can be found in the LICENSE file.
 
 import 'package:flutter/material.dart';
+import 'package:full_boilerplate/app/ui/themes/my_app_textstyles.dart';
 
 DataTableThemeData myMaterialDataTableThemeData = DataTableThemeData(
   dataRowHeight: 16,
@@ -15,6 +16,3 @@ DataTableThemeData myMaterialDataTableThemeData = DataTableThemeData(
   headingTextStyle: myHeadingTextStyle,
 );
 
-TextStyle myDataTextStyle = TextStyle();
-
-TextStyle myHeadingTextStyle = TextStyle();

@@ -5,26 +5,27 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
-import 'package:full_boilerplate/app/ui/themes/my_color_schemes.dart';
+import 'package:full_boilerplate/app/ui/themes/my_app_common_theme_vars.dart';
+
 
 
 MaterialFlatButtonData myMaterialFlatButtonData = MaterialFlatButtonData(
   widgetKey: const Key('flatbutton'),
-  color: myColorSchemes.primary,
+  color: myButtonColor,
   padding: EdgeInsetsGeometry.infinity,
-  disabledColor: Colors.grey,
+  disabledColor: myDisabledColor,
   disabledElevation: 4,
-  disabledTextColor: Colors.black12,
+  disabledTextColor: myDisabledTextColor,
   elevation: 10,
-  highlightColor: myColorSchemes.primaryVariant,
+  highlightColor: myHighlightColor,
   highlightElevation: 14,
-  splashColor: myColorSchemes.secondary,
-  textColor: myColorSchemes.secondaryVariant,
+  splashColor: mySplashColor,
+  textColor: myButtonTextColor,
   clipBehavior: Clip.hardEdge,
   materialTapTargetSize: MaterialTapTargetSize.padded,
   focusElevation: 16,
-  focusColor: myColorSchemes.secondary,
-  hoverColor: myColorSchemes.secondaryVariant,
+  focusColor: myFocusColor,
+  hoverColor: myHoverColor,
   animationDuration: const Duration(seconds: 4),
   visualDensity: VisualDensity.adaptivePlatformDensity,
   autofocus: true,

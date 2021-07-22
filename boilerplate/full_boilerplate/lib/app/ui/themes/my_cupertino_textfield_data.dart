@@ -3,23 +3,25 @@
 // license that can be found in the LICENSE file.
 
 import 'package:flutter/cupertino.dart';
+import 'package:full_boilerplate/app/ui/themes/my_app_common_theme_vars.dart';
+import 'package:full_boilerplate/app/ui/themes/my_app_textstyles.dart';
 
-CupertinoTextField myCupertinoTextFieldData = const CupertinoTextField(
-  key: Key('textfield'),
+CupertinoTextField myCupertinoTextFieldData = CupertinoTextField(
+  key: const Key('textfield'),
   padding: EdgeInsetsGeometry.infinity,
-  placeholder: '',
+  placeholder: textFieldPlaceholder,
   // ignore: avoid_redundant_argument_values
   prefixMode: OverlayVisibilityMode.always,
   // ignore: avoid_redundant_argument_values
   suffixMode: OverlayVisibilityMode.always,
   clearButtonMode: OverlayVisibilityMode.always,
-  keyboardType: TextInputType.numberWithOptions(),
+  keyboardType: const TextInputType.numberWithOptions(),
   textInputAction: TextInputAction.done,
   textCapitalization: TextCapitalization.words,
   textAlign: TextAlign.center,
   // ignore: avoid_redundant_argument_values
   readOnly: false,
-  toolbarOptions: ToolbarOptions(copy: true),
+  toolbarOptions: const ToolbarOptions(copy: true),
   showCursor: true,
   autofocus: true,
   obscuringCharacter: '*',
@@ -28,4 +30,6 @@ CupertinoTextField myCupertinoTextFieldData = const CupertinoTextField(
   autocorrect: true,
   smartDashesType: SmartDashesType.enabled,
   smartQuotesType: SmartQuotesType.enabled,
+  style: myTextFieldTextStyle,
+  strutStyle: myTextFieldStrutStyle,
 );
