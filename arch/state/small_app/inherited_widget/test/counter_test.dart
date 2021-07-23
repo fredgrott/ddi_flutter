@@ -18,6 +18,7 @@ class MyCounter implements ICounter {
   @override
   int counter = 0;
 
+  @override
   int increment() {
     return counter++;
   }

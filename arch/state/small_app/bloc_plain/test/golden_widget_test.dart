@@ -3,6 +3,9 @@
 // license that can be found in the LICENSE file.
 
 
+import 'package:bloc_plain/app/my_app.dart';
+import 'package:bloc_plain/app/shared/app_vars.dart';
+import 'package:bloc_plain/app/ui/home/my_homepage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -13,9 +16,7 @@ import 'package:flutter_test/flutter_test.dart';
 
 
 import 'package:golden_toolkit/golden_toolkit.dart';
-import 'package:inherited_model/app/my_app.dart';
-import 'package:inherited_model/app/shared/app_vars.dart';
-import 'package:inherited_model/app/ui/home/my_homepage.dart';
+
 
 
 // so we know what to match

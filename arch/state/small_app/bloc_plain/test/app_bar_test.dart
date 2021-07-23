@@ -5,8 +5,9 @@
 
 
 
+import 'package:bloc_plain/app/shared/app_vars.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:inherited_model/app/shared/app_vars.dart';
+
 
 
 

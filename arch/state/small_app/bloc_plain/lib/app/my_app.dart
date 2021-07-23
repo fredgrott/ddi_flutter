@@ -4,15 +4,16 @@
 
 import 'dart:ui';
 
+import 'package:bloc_plain/app/shared/app_vars.dart';
+import 'package:bloc_plain/app/ui/home/my_homepage.dart';
+import 'package:bloc_plain/app/ui/themes/my_material_theme_data.dart';
+import 'package:bloc_plain/app/ui/themes/my_materialbased_cupertinotheme_data.dart';
 import 'package:catcher/catcher.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
-import 'package:inherited_model/app/shared/app_vars.dart';
-import 'package:inherited_model/app/ui/home/my_homepage.dart';
-import 'package:inherited_model/app/ui/themes/my_material_theme_data.dart';
-import 'package:inherited_model/app/ui/themes/my_materialbased_cupertinotheme_data.dart';
+
 
 
 

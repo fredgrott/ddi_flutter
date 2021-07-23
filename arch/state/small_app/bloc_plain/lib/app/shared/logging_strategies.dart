@@ -5,8 +5,9 @@
 import 'dart:developer';
 
 
-import 'package:inherited_model/app/shared/app_vars.dart';
-import 'package:inherited_model/app/shared/build_modes.dart';
+
+import 'package:bloc_plain/app/shared/app_vars.dart';
+import 'package:bloc_plain/app/shared/build_modes.dart';
 import 'package:logging/logging.dart';
 import 'package:logging_appenders/logging_appenders.dart';
 

@@ -18,6 +18,7 @@ class CounterModel with ICounter {
 
   CounterModel({required this.counter});
 
+  @override
   int increment() {
     myLogger.info('$counter increment by one');
 

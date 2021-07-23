@@ -6,11 +6,12 @@
 
 import 'dart:async';
 
+import 'package:bloc_plain/app/shared/custom_follower.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
-import 'package:inherited_model/app/shared/custom_follower.dart';
+
 
 
 /// The widget where a [PortalEntry] is rendered.

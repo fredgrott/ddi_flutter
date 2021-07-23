@@ -3,8 +3,8 @@
 // license that can be found in the LICENSE file.
 
 
+import 'package:bloc_plain/app/ui/themes/my_color_schemes.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
-import 'package:inherited_model/app/ui/themes/my_color_schemes.dart';
 
 
 CupertinoPageScaffoldData myCupertinoPageScaffoldData = CupertinoPageScaffoldData(

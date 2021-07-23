@@ -3,14 +3,15 @@
 // license that can be found in the LICENSE file.
 
 
+import 'package:bloc_plain/app/my_app.dart';
+import 'package:bloc_plain/app/shared/app_vars.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_test/flutter_test.dart';
 
 
 import 'package:given_when_then/given_when_then.dart';
-import 'package:inherited_model/app/my_app.dart';
-import 'package:inherited_model/app/shared/app_vars.dart';
+
 
 
 String myTitle = myAppTitle;

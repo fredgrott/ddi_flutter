@@ -2,33 +2,34 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
+import 'package:bloc_plain/app/ui/themes/my_app_button_theme_data.dart';
+import 'package:bloc_plain/app/ui/themes/my_app_textstyles.dart';
+import 'package:bloc_plain/app/ui/themes/my_material_appbar_theme.dart';
+import 'package:bloc_plain/app/ui/themes/my_material_banner_theme_data.dart';
+import 'package:bloc_plain/app/ui/themes/my_material_bottom_appbar_theme_data.dart';
+import 'package:bloc_plain/app/ui/themes/my_material_bottom_navigationbar_theme_data.dart';
+import 'package:bloc_plain/app/ui/themes/my_material_card_theme.dart';
+import 'package:bloc_plain/app/ui/themes/my_material_data_table_theme_data.dart';
+import 'package:bloc_plain/app/ui/themes/my_material_dialog_theme.dart';
+import 'package:bloc_plain/app/ui/themes/my_material_divider_theme_data.dart';
+import 'package:bloc_plain/app/ui/themes/my_material_elevated_button_theme_data.dart';
+import 'package:bloc_plain/app/ui/themes/my_material_floating_action_bar_theme_data.dart';
+import 'package:bloc_plain/app/ui/themes/my_material_icon_theme_data.dart';
+import 'package:bloc_plain/app/ui/themes/my_material_outline_button_theme_data.dart';
+import 'package:bloc_plain/app/ui/themes/my_material_page_transition_theme.dart';
+import 'package:bloc_plain/app/ui/themes/my_material_popup_menu_theme_data.dart';
+import 'package:bloc_plain/app/ui/themes/my_material_radio_theme_data.dart';
+import 'package:bloc_plain/app/ui/themes/my_material_rail_navigation_theme_data.dart';
+import 'package:bloc_plain/app/ui/themes/my_material_scrollbar_theme_data.dart';
+import 'package:bloc_plain/app/ui/themes/my_material_snackbar_theme_data.dart';
+import 'package:bloc_plain/app/ui/themes/my_material_tab_bar_theme_data.dart';
+import 'package:bloc_plain/app/ui/themes/my_material_text_button_theme_data.dart';
+import 'package:bloc_plain/app/ui/themes/my_material_text_selection_theme_data.dart';
+import 'package:bloc_plain/app/ui/themes/my_material_time_picker_theme_data.dart';
+import 'package:bloc_plain/app/ui/themes/my_material_toggle_button_theme_data.dart';
+import 'package:bloc_plain/app/ui/themes/my_material_tooltip_theme_data.dart';
 import 'package:flutter/material.dart';
-import 'package:inherited_model/app/ui/themes/my_app_button_theme_data.dart';
-import 'package:inherited_model/app/ui/themes/my_app_textstyles.dart';
-import 'package:inherited_model/app/ui/themes/my_material_appbar_theme.dart';
-import 'package:inherited_model/app/ui/themes/my_material_banner_theme_data.dart';
-import 'package:inherited_model/app/ui/themes/my_material_bottom_appbar_theme_data.dart';
-import 'package:inherited_model/app/ui/themes/my_material_bottom_navigationbar_theme_data.dart';
-import 'package:inherited_model/app/ui/themes/my_material_card_theme.dart';
-import 'package:inherited_model/app/ui/themes/my_material_data_table_theme_data.dart';
-import 'package:inherited_model/app/ui/themes/my_material_dialog_theme.dart';
-import 'package:inherited_model/app/ui/themes/my_material_divider_theme_data.dart';
-import 'package:inherited_model/app/ui/themes/my_material_elevated_button_theme_data.dart';
-import 'package:inherited_model/app/ui/themes/my_material_floating_action_bar_theme_data.dart';
-import 'package:inherited_model/app/ui/themes/my_material_icon_theme_data.dart';
-import 'package:inherited_model/app/ui/themes/my_material_outline_button_theme_data.dart';
-import 'package:inherited_model/app/ui/themes/my_material_page_transition_theme.dart';
-import 'package:inherited_model/app/ui/themes/my_material_popup_menu_theme_data.dart';
-import 'package:inherited_model/app/ui/themes/my_material_radio_theme_data.dart';
-import 'package:inherited_model/app/ui/themes/my_material_rail_navigation_theme_data.dart';
-import 'package:inherited_model/app/ui/themes/my_material_scrollbar_theme_data.dart';
-import 'package:inherited_model/app/ui/themes/my_material_snackbar_theme_data.dart';
-import 'package:inherited_model/app/ui/themes/my_material_tab_bar_theme_data.dart';
-import 'package:inherited_model/app/ui/themes/my_material_text_button_theme_data.dart';
-import 'package:inherited_model/app/ui/themes/my_material_text_selection_theme_data.dart';
-import 'package:inherited_model/app/ui/themes/my_material_time_picker_theme_data.dart';
-import 'package:inherited_model/app/ui/themes/my_material_toggle_button_theme_data.dart';
-import 'package:inherited_model/app/ui/themes/my_material_tooltip_theme_data.dart';
+
 
 
 ThemeData lightTheme =

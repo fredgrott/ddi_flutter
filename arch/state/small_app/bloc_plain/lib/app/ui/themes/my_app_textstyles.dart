@@ -4,12 +4,13 @@
 
 // My App TextStyles for both Material And Cupertino Platforms
 
+import 'package:bloc_plain/app/ui/themes/my_color_schemes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
 
 import 'package:google_fonts/google_fonts.dart';
-import 'package:inherited_model/app/ui/themes/my_color_schemes.dart';
+
 
 // This uses the MaterialBasedCupertinoThemeData mechs so that
 // we have one base text theme for both Material and Cupertino widgets

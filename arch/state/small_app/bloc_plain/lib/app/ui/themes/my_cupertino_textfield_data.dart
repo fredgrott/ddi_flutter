@@ -2,9 +2,10 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
+import 'package:bloc_plain/app/ui/themes/my_app_common_theme_vars.dart';
+import 'package:bloc_plain/app/ui/themes/my_app_textstyles.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:inherited_model/app/ui/themes/my_app_common_theme_vars.dart';
-import 'package:inherited_model/app/ui/themes/my_app_textstyles.dart';
+
 
 
 CupertinoTextField myCupertinoTextFieldData = CupertinoTextField(

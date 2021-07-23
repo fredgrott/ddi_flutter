@@ -1,13 +1,14 @@
 import 'dart:async';
 
+import 'package:bloc_plain/app/my_app.dart';
+import 'package:bloc_plain/app/shared/app_vars.dart';
+import 'package:bloc_plain/app/shared/build_modes.dart';
+import 'package:bloc_plain/app/shared/catcher.dart';
 import 'package:catcher/catcher.dart';
 
 
 import 'package:flutter/widgets.dart';
-import 'package:inherited_model/app/my_app.dart';
-import 'package:inherited_model/app/shared/app_vars.dart';
-import 'package:inherited_model/app/shared/build_modes.dart';
-import 'package:inherited_model/app/shared/catcher.dart';
+
 
 
 

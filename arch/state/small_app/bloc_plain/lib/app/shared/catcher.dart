@@ -2,9 +2,9 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
+import 'package:bloc_plain/app/shared/app_vars.dart';
+import 'package:bloc_plain/app/shared/constants.dart';
 import 'package:catcher/catcher.dart';
-import 'package:inherited_model/app/shared/app_vars.dart';
-import 'package:inherited_model/app/shared/constants.dart';
 
 
 

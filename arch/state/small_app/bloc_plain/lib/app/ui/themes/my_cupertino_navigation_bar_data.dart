@@ -4,11 +4,11 @@
 
 import 'dart:ui';
 
+import 'package:bloc_plain/app/ui/themes/my_app_common_theme_vars.dart';
+import 'package:bloc_plain/app/ui/themes/my_color_schemes.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
-import 'package:inherited_model/app/ui/themes/my_app_common_theme_vars.dart';
-import 'package:inherited_model/app/ui/themes/my_color_schemes.dart';
 
 
 

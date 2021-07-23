@@ -8,8 +8,10 @@
 
 
 
-import 'package:inherited_model/app/shared/constants.dart';
-import 'package:inherited_model/main.dart';
+
+
+import 'package:bloc_plain/app/shared/constants.dart';
+import 'package:bloc_plain/main.dart';
 
 void main() {
 
