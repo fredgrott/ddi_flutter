@@ -8,9 +8,9 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:states_rebuilder_example/app/domain/models/count_model.dart';
-import 'package:states_rebuilder_example/app/domain/repositories/countmodelx.dart';
 import 'package:states_rebuilder_example/app/my_app.dart';
 import 'package:states_rebuilder_example/app/shared/app_vars.dart';
+
 
 // By mocking this we get the increment method
 // as there is an extension on CountModel that
@@ -18,6 +18,9 @@ import 'package:states_rebuilder_example/app/shared/app_vars.dart';
 // behavior of the ServiceLayer before the VM
 class MyCountCount extends CountModel {
   MyCountCount(int count) : super(count);
+
+  // ignore: unnecessary_this
+  int increment() => this.count;
 }
 
 class MockCount extends Mock implements MyCountCount {}
