@@ -14,7 +14,8 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:golden_toolkit/golden_toolkit.dart';
 import 'package:inherited_widget/app/my_app.dart';
 import 'package:inherited_widget/app/shared/app_vars.dart';
-import 'package:inherited_widget/app/ui/home/my_homepage.dart';
+
+import 'package:inherited_widget/app/ui/home/myhomepage.dart';
 
 
 // so we know what to match

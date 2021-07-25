@@ -2,13 +2,13 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
-class CounterStoreMixin {
-  static const int _counter = 0;
+import 'package:inherited_widget/app/domain/entities/icounter.dart';
 
-  int myCounter = _counter;
+class CounterModel implements ICounter{
+  @override
+  int counter = 0;
 
-  int increaseCounter() {
-    return myCounter++;
-  }
+  
+  
+
 }
-
