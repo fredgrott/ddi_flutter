@@ -7,6 +7,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
+import 'package:inherited_stateprovider/app/domain/binders/countprovider.dart';
 import 'package:inherited_stateprovider/app/shared/app_vars.dart';
 import 'package:inherited_stateprovider/app/ui/themes/my_cupertino_iconbutton_data.dart';
 import 'package:inherited_stateprovider/app/ui/themes/my_cupertino_navigation_bar_data.dart';
@@ -52,12 +53,14 @@ class MyHomePageState extends State<MyHomePage>  {
 
   @override
   Widget build(BuildContext context) {
+    counterProvider = CountProvider.of(context);
     // This method is rerun every time setState is called, for instance as done
     // by the _incrementCounter method above.
     //
     // The Flutter framework has been optimized to make rerunning build methods
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
+    
     return AnnotatedRegion<SystemUiOverlayStyle>(
         value: SystemUiOverlayStyle.dark.copyWith(
           statusBarColor: Colors.transparent,
