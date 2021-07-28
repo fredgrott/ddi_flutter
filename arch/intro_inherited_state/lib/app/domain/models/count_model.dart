@@ -7,7 +7,7 @@
 import 'package:intro_inherited_state/app/domain/entities/icount.dart';
 
 class CountModel implements ICount {
-  CountModel({this.count = 0});
+  CountModel({this.count});
 
   @override
   late int count;
