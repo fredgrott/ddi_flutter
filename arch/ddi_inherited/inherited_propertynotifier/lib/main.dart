@@ -4,10 +4,10 @@ import 'package:catcher/catcher.dart';
 
 
 import 'package:flutter/widgets.dart';
-import 'package:inherited_statenotifier/app/my_app.dart';
-import 'package:inherited_statenotifier/app/shared/app_vars.dart';
-import 'package:inherited_statenotifier/app/shared/build_modes.dart';
-import 'package:inherited_statenotifier/app/shared/catcher.dart';
+import 'package:inherited_propertynotifier/app/my_app.dart';
+import 'package:inherited_propertynotifier/app/shared/app_vars.dart';
+import 'package:inherited_propertynotifier/app/shared/build_modes.dart';
+import 'package:inherited_propertynotifier/app/shared/catcher.dart';
 
 
 

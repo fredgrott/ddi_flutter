@@ -1,4 +1,4 @@
-name: inherited_statenotifier
+name: inherited_propertynotifier
 description: A new Flutter project.
 
 # The following line prevents the package from being accidentally published to
@@ -36,7 +36,7 @@ dependencies:
   google_fonts: ^2.1.0
   flutter_platform_widgets: ^1.9.5
   responsive_framework: ^0.1.4
-
+  
 
 
 
