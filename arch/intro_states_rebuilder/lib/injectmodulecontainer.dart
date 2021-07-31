@@ -15,10 +15,7 @@ class InjectModuleContainer {
     injector.map<Logger>((injector) => CoreAppLogger() as Logger,
         isSingleton: true,);
 
-    //to call will be:
-    // injector.get<BrightnessService>().getAppBrightness()
-    injector.map<BrightnessService>((injector) => BrightnessService());
-
+    
     return injector;
   }
 }
