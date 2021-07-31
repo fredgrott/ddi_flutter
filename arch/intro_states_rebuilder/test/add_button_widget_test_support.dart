@@ -9,7 +9,8 @@ import 'package:flutter_test/flutter_test.dart';
 
 
 import 'package:given_when_then/given_when_then.dart';
-import 'package:intro_states_rebuilder/app/my_app.dart';
+import 'package:intro_states_rebuilder/app/myapp.dart';
+
 import 'package:intro_states_rebuilder/app/shared/app_vars.dart';
 
 

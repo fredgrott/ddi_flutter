@@ -5,30 +5,30 @@
 import 'dart:ui';
 
 import 'package:catcher/catcher.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
-import 'package:intro_states_rebuilder/app/shared/app_vars.dart';
-import 'package:intro_states_rebuilder/app/ui/home/my_homepage.dart';
+import 'package:intro_states_rebuilder/app/ui/home/myhomepage.dart';
+
 import 'package:intro_states_rebuilder/app/ui/themes/my_material_theme_data.dart';
 import 'package:intro_states_rebuilder/app/ui/themes/my_materialbased_cupertinotheme_data.dart';
 import 'package:intro_states_rebuilder/generated/l10n.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
+class MyApp extends StatelessWidget {
+  late final GlobalKey<NavigatorState> navigatorKey;
 
+  // we only need these two as responsive framework builder 
+  // handles other stuff
+  final Brightness brightness =
+      MediaQueryData.fromWindow(WidgetsBinding.instance!.window)
+          .platformBrightness;
+  
+  // we need this when finally  full highcontrast on android is in place
+  final appHighContrast =
+      MediaQueryData.fromWindow(WidgetsBinding.instance!.window).highContrast;
 
-class MyApp extends StatefulWidget {
-  final GlobalKey<NavigatorState> navigatorKey;
-
-  const MyApp(this.navigatorKey);
-
-  @override
-  MyAppState createState() => MyAppState();
-}
-
-class MyAppState extends State<MyApp> {
-  Brightness brightness = Brightness.light;
+  MyApp(this.navigatorKey);
 
   @override
   Widget build(BuildContext context) {
@@ -45,15 +45,15 @@ class MyAppState extends State<MyApp> {
         builder: (context) => PlatformApp(
           debugShowCheckedModeBanner: false,
           navigatorKey: Catcher.navigatorKey,
-          // ignore: prefer_const_literals_to_create_immutables
-          localizationsDelegates: <LocalizationsDelegate<dynamic>>[
+          localizationsDelegates: const <LocalizationsDelegate<dynamic>>[
             // ignore: prefer_const_literals_to_create_immutables
             AppLocalizations.delegate,
-
           ],
           supportedLocales: AppLocalizations.delegate.supportedLocales,
           builder: (_, __) => ResponsiveWrapper.builder(
-            MyHomePage(title: AppLocalizations.of(context).appTitle,),
+            MyHomePage(
+              title: AppLocalizations.of(context).appTitle,
+            ),
             maxWidth: 1200,
             minWidth: 480,
             defaultScale: true,
@@ -66,10 +66,9 @@ class MyAppState extends State<MyApp> {
             ],
           ),
           onGenerateTitle: (context) => AppLocalizations.of(context).appTitle,
-
           material: (_, __) {
             return MaterialAppData(
-              navigatorKey: navigatorKey,
+              navigatorKey: Catcher.navigatorKey,
               theme: lightTheme,
               darkTheme: darkTheme,
               themeMode: brightness == Brightness.light
@@ -78,13 +77,10 @@ class MyAppState extends State<MyApp> {
             );
           },
           cupertino: (_, __) => CupertinoAppData(
-            navigatorKey: navigatorKey,
+            navigatorKey: Catcher.navigatorKey,
             // flows the Material Theme lightTheme through all the Cupertino stuff
             theme: myMaterialBasedCupertinoThemeData,
-            
-            
           ),
-          
         ),
       ),
     );

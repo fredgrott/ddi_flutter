@@ -29,4 +29,4 @@ final counterStore = RM.inject<CounterModel>(() => CounterModel(0),
       //any error checking via middleSnapState goes here
 
       //Can return another state
-    });
+    },);

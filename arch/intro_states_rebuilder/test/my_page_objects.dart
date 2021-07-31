@@ -5,8 +5,10 @@
 
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:intro_states_rebuilder/app/my_app.dart';
-import 'package:intro_states_rebuilder/app/ui/home/my_homepage.dart';
+import 'package:intro_states_rebuilder/app/myapp.dart';
+import 'package:intro_states_rebuilder/app/ui/home/myhomepage.dart';
+
+
 
 
 

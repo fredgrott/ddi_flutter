@@ -13,7 +13,7 @@ import 'package:logging/logging.dart';
 class InjectModuleContainer {
   Injector initialise(Injector injector) {
     injector.map<Logger>((injector) => CoreAppLogger() as Logger,
-        isSingleton: true);
+        isSingleton: true,);
 
     //to call will be:
     // injector.get<BrightnessService>().getAppBrightness()

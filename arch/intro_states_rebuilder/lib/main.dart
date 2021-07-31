@@ -4,7 +4,8 @@ import 'package:catcher/catcher.dart';
 
 import 'package:flutter/widgets.dart';
 import 'package:flutter_simple_dependency_injection/injector.dart';
-import 'package:intro_states_rebuilder/app/my_app.dart';
+import 'package:intro_states_rebuilder/app/myapp.dart';
+
 import 'package:intro_states_rebuilder/app/shared/app_vars.dart';
 import 'package:intro_states_rebuilder/app/shared/build_modes.dart';
 import 'package:intro_states_rebuilder/app/shared/catcher.dart';

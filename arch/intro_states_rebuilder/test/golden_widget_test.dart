@@ -13,9 +13,11 @@ import 'package:flutter_test/flutter_test.dart';
 
 
 import 'package:golden_toolkit/golden_toolkit.dart';
-import 'package:intro_states_rebuilder/app/my_app.dart';
+import 'package:intro_states_rebuilder/app/myapp.dart';
+
 import 'package:intro_states_rebuilder/app/shared/app_vars.dart';
-import 'package:intro_states_rebuilder/app/ui/home/my_homepage.dart';
+
+import 'package:intro_states_rebuilder/app/ui/home/myhomepage.dart';
 
 
 // so we know what to match
