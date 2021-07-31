@@ -37,6 +37,7 @@ dependencies:
   flutter_platform_widgets: ^1.9.5
   responsive_framework: ^0.1.4
   flutter_simple_dependency_injection: ^2.0.0
+  states_rebuilder: ^4.3.0
 
 
 

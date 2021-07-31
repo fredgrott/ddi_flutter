@@ -2,15 +2,14 @@ import 'dart:async';
 
 import 'package:catcher/catcher.dart';
 
-
 import 'package:flutter/widgets.dart';
+import 'package:flutter_simple_dependency_injection/injector.dart';
 import 'package:intro_states_rebuilder/app/my_app.dart';
 import 'package:intro_states_rebuilder/app/shared/app_vars.dart';
 import 'package:intro_states_rebuilder/app/shared/build_modes.dart';
 import 'package:intro_states_rebuilder/app/shared/catcher.dart';
-
-
-
+import 'package:intro_states_rebuilder/app/shared/logging_strategies.dart';
+import 'package:intro_states_rebuilder/injectmodulecontainer.dart';
 
 // This works as the main function in say main_dev.dart
 // redirects to this mainDelegate() function and
@@ -20,10 +19,13 @@ void mainDelegate() => main();
 
 // ignore: prefer_void_to_null
 Future<Null> main() async {
+  //you just need to do this once at the begin of main
+  //injector = InjectModuleContainer().initialise(Injector());
+  injector = InjectModuleContainer().initialise(Injector());
 
-  
-  
-
+  // any time we to call our DIs we just do this as this awy we have 
+  // no ref to another class file which makes mocking so much easier
+  injector.get<CoreAppLogger>().appLogger.info('start app initialization');
 
   // an internal FlutterError reporter that dumps to console
   FlutterError.onError = (FlutterErrorDetails details) async {
@@ -39,8 +41,11 @@ Future<Null> main() async {
         // so I just assume we do not have a stack trace but still want the
         // detail of the exception.
         // ignore: cast_nullable_to_non_nullable
-        Zone.current.handleUncaughtError(details.exception, details.stack as StackTrace);
-        //Zone.current.handleUncaughtError(details.exception,  details.stack);
+        Zone.current.handleUncaughtError(
+            details.exception,
+            // ignore: cast_nullable_to_non_nullable
+            details.stack as StackTrace,
+            );
       }
     }
   };
@@ -54,7 +59,8 @@ Future<Null> main() async {
       WidgetsFlutterBinding.ensureInitialized();
 
       // To allow Catcher reports to work
-      final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
+      final GlobalKey<NavigatorState> navigatorKey =
+          GlobalKey<NavigatorState>();
       // Service and other initializations here
       // Catcher takes care of app-user feedback on app errors, error reports to devs and dev team via sentry,
       // crashanalytics, slack, etc.
@@ -81,6 +87,5 @@ Future<Null> main() async {
         parent.print(zone, messageToLog);
       },
     ),
-
   );
 }
