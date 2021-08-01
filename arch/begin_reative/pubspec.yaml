@@ -35,6 +35,7 @@ dependencies:
   intl: ^0.17.0
   google_fonts: ^2.1.0
   flutter_platform_widgets: ^1.9.5
+  async: ^2.7.0
 
 
 
