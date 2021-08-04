@@ -38,6 +38,7 @@ dependencies:
   responsive_framework: ^0.1.4
   async: ^2.7.0
   equatable: ^2.0.3
+  flutter_bloc: ^7.1.0
 
     
 
