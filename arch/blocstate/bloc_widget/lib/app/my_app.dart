@@ -4,19 +4,20 @@
 
 import 'dart:ui';
 
+import 'package:bloc_widget/app/shared/app_exception.dart';
+import 'package:bloc_widget/app/splash.dart';
+import 'package:bloc_widget/app/ui/home/my_homepage.dart';
+import 'package:bloc_widget/app/ui/themes/my_material_theme_data.dart';
+import 'package:bloc_widget/app/ui/themes/my_materialbased_cupertinotheme_data.dart';
+import 'package:bloc_widget/init.dart';
 import 'package:catcher/catcher.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
-import 'package:onion_novice/app/shared/app_exception.dart';
-import 'package:onion_novice/app/shared/app_vars.dart';
-import 'package:onion_novice/app/splash.dart';
-import 'package:onion_novice/app/ui/home/my_homepage.dart';
-import 'package:onion_novice/app/ui/themes/my_material_theme_data.dart';
-import 'package:onion_novice/app/ui/themes/my_materialbased_cupertinotheme_data.dart';
-import 'package:onion_novice/generated/l10n.dart';
-import 'package:onion_novice/init.dart';
+
+import 'package:bloc_widget/generated/l10n.dart';
+
 import 'package:responsive_framework/responsive_framework.dart';
 
 class MyApp extends StatefulWidget {

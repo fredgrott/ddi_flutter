@@ -76,7 +76,7 @@ class MyAppState extends State<MyApp> {
                     AppLocalizations.of(context).appTitle,
                 material: (_, __) {
                   return MaterialAppData(
-                    navigatorKey: Catcher.navigatorKey,
+                    navigatorKey: navigatorKey,
                     theme: lightTheme,
                     darkTheme: darkTheme,
                     themeMode: brightness == Brightness.light
@@ -85,7 +85,7 @@ class MyAppState extends State<MyApp> {
                   );
                 },
                 cupertino: (_, __) => CupertinoAppData(
-                  navigatorKey: Catcher.navigatorKey,
+                  navigatorKey: navigatorKey,
                   // flows the Material Theme lightTheme through all the Cupertino stuff
                   theme: myMaterialBasedCupertinoThemeData,
                 ),
