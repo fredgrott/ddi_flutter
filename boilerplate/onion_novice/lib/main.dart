@@ -5,7 +5,9 @@ import 'package:catcher/catcher.dart';
 
 import 'package:flutter/widgets.dart';
 import 'package:onion_novice/app/my_app.dart';
+import 'package:onion_novice/app/shared/app_logging.dart';
 import 'package:onion_novice/app/shared/app_vars.dart';
+
 import 'package:onion_novice/app/shared/build_modes.dart';
 import 'package:onion_novice/app/shared/catcher.dart';
 
@@ -21,6 +23,7 @@ Future<Null> main() async {
   // ensure that the Flutter SkyEngine has fully initialized
   WidgetsFlutterBinding.ensureInitialized();
   
+  initLogger();
 
   // an internal FlutterError reporter that dumps to console
   FlutterError.onError = (FlutterErrorDetails details) async {
