@@ -2,7 +2,7 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 //
-// Reactive Component originally created by Ntaoo of Polyflection under BSD License.
+// Reactive Component originally created by Naoto of Polyflection under BSD License.
 // Modifications by Fredrick Allan Grott under BSD License.
 
 
