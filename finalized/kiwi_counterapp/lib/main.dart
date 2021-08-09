@@ -1,9 +1,6 @@
 import 'dart:async';
 
-
 import 'package:catcher/catcher.dart';
-
-
 
 import 'package:flutter/widgets.dart';
 import 'package:kiwi_counterapp/app/my_app.dart';
@@ -11,10 +8,7 @@ import 'package:kiwi_counterapp/app/shared/app_logging.dart';
 import 'package:kiwi_counterapp/app/shared/app_vars.dart';
 import 'package:kiwi_counterapp/app/shared/build_modes.dart';
 import 'package:kiwi_counterapp/app/shared/catcher.dart';
-
-
-
-
+import 'package:kiwi_counterapp/app_injector.dart';
 
 // This works as the main function in say main_dev.dart
 // redirects to this mainDelegate() function and
@@ -26,8 +20,13 @@ void mainDelegate() => main();
 Future<Null> main() async {
   // ensure that the Flutter SkyEngine has fully initialized
   WidgetsFlutterBinding.ensureInitialized();
-  
+
   initLogger();
+  // we grab stuff via:
+  //  theLogger = iocContainer.resolveAs<KiwiLogger>('AppLogger');
+  // then the final call is
+  // theLogger.myLogger.info('log me');
+  initIOC();
 
   // an internal FlutterError reporter that dumps to console
   FlutterError.onError = (FlutterErrorDetails details) async {
@@ -44,8 +43,9 @@ Future<Null> main() async {
         // detail of the exception.
         // ignore: cast_nullable_to_non_nullable
         Zone.current.handleUncaughtError(
-            // ignore: cast_nullable_to_non_nullable
-            details.exception, details.stack as StackTrace,);
+          // ignore: cast_nullable_to_non_nullable
+          details.exception, details.stack as StackTrace,
+        );
         //Zone.current.handleUncaughtError(details.exception,  details.stack);
       }
     }
@@ -90,4 +90,3 @@ Future<Null> main() async {
     ),
   );
 }
-

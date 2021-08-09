@@ -3,6 +3,9 @@
 // license that can be found in the LICENSE file.
 
 import 'package:flutter/widgets.dart';
+import 'package:kiwi/kiwi.dart';
+
+late final KiwiContainer iocContainer;
 
 String myAppTitle = "FullBoilerplate";
 
