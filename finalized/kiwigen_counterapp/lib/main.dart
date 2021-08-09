@@ -1,17 +1,13 @@
 import 'dart:async';
 
-
 import 'package:catcher/catcher.dart';
 
-
-
 import 'package:flutter/widgets.dart';
-import 'package:flutter_basics_boilerplate/app/my_app.dart';
-import 'package:flutter_basics_boilerplate/app/shared/app_logging.dart';
-import 'package:flutter_basics_boilerplate/app/shared/app_vars.dart';
-import 'package:flutter_basics_boilerplate/app/shared/build_modes.dart';
-import 'package:flutter_basics_boilerplate/app/shared/catcher.dart';
-
+import 'package:kiwigen_counterapp/app/my_app.dart';
+import 'package:kiwigen_counterapp/app/shared/app_logging.dart';
+import 'package:kiwigen_counterapp/app/shared/app_vars.dart';
+import 'package:kiwigen_counterapp/app/shared/build_modes.dart';
+import 'package:kiwigen_counterapp/app/shared/catcher.dart';
 
 
 
@@ -25,8 +21,16 @@ void mainDelegate() => main();
 Future<Null> main() async {
   // ensure that the Flutter SkyEngine has fully initialized
   WidgetsFlutterBinding.ensureInitialized();
-  
+
   initLogger();
+  // we grab stuff via:
+  //  theLogger = iocContainer.resolve<KiwiLogger>('AppLogger');
+  // then the final call is
+  // theLogger.myLogger.info('log me');
+  
+
+  // ignore: invalid_use_of_visible_for_testing_member
+ 
 
   // an internal FlutterError reporter that dumps to console
   FlutterError.onError = (FlutterErrorDetails details) async {
@@ -43,8 +47,9 @@ Future<Null> main() async {
         // detail of the exception.
         // ignore: cast_nullable_to_non_nullable
         Zone.current.handleUncaughtError(
-            // ignore: cast_nullable_to_non_nullable
-            details.exception, details.stack as StackTrace,);
+          // ignore: cast_nullable_to_non_nullable
+          details.exception, details.stack as StackTrace,
+        );
         //Zone.current.handleUncaughtError(details.exception,  details.stack);
       }
     }
@@ -89,4 +94,3 @@ Future<Null> main() async {
     ),
   );
 }
-
