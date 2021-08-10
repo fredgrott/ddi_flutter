@@ -33,10 +33,24 @@ void initLogger() {
     MyDevLogAppender(formatter: const MyDevLogRecordFormatter())
         .attachToLogger(Logger.root);
   }
-  if (isInReleaseMode) {
-    recordStackTraceAtLevel = Level.OFF;
-    appLogger.level = Level.OFF;
-  }
+  if(isInReleaseMode){
+  recordStackTraceAtLevel = Level.ALL;
+    Logger.root.onRecord.listen((record) {
+      if (record.error != null && record.stackTrace != null) {
+        log('${record.level.name}: ${record.loggerName}: ${record.time}: ${record.message}: ${record.error}: ${record.stackTrace}');
+
+        log(
+            // ignore: prefer-trailing-comma
+            'level: ${record.level.name} loggerName: ${record.loggerName} time: ${record.time} message: ${record.message} error: ${record.error} exception: ${record.stackTrace}');
+      } else if (record.error != null) {
+        log('level: ${record.level.name} loggerName: ${record.loggerName} time: ${record.time} message: ${record.message} error: ${record.error}');
+      } else {
+        log('level: ${record.level.name} loggerName: ${record.loggerName} time: ${record.time} message: ${record.message}');
+      }
+    });
+    MyReleaseLogAppender(formatter: const MyDevLogRecordFormatter())
+        .attachToLogger(Logger.root);
+}
 }
 
 LogRecordFormatter defaultLogRecordFormatter() =>
